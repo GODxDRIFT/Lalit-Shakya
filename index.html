@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lalit Shakya | Cloud, Dev & AI Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&family=Inter:wght@300;400;700;900&display=swap');
+        
+        :root { --cmd-bg: #0d1117; --accent: #238636; }
+        body { font-family: 'Inter', sans-serif; background-color: #010409; color: #c9d1d9; scroll-behavior: smooth; }
+        .mono { font-family: 'Fira Code', monospace; }
+        
+        .terminal-window {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        
+        .code-gradient {
+            background: linear-gradient(90deg, #58a6ff, #bc8cff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-blur { backdrop-filter: blur(12px); background: rgba(1, 4, 9, 0.8); }
+        
+        .skill-badge {
+            background: rgba(48, 54, 61, 0.3);
+            border: 1px solid #30363d;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .skill-badge:hover { 
+            border-color: #58a6ff; 
+            background: rgba(88, 166, 255, 0.1);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="selection:bg-blue-500/30">
+
+    <nav class="fixed top-0 w-full z-50 border-b border-[#30363d] nav-blur">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="mono text-sm font-bold flex items-center gap-2">
+                <span class="text-[#238636]">~/</span>
+                <span class="text-white">lalit-shakya</span>
+            </div>
+            <div class="hidden md:flex gap-6 text-[11px] mono uppercase tracking-widest text-slate-400">
+                <a href="#work" class="hover:text-blue-400 transition">./projects</a>
+                <a href="#stack" class="hover:text-blue-400 transition">./skills</a>
+                <a href="#edu" class="hover:text-blue-400 transition">./education</a>
+            </div>
+            <a href="mailto:lalshakya27@gmail.com" class="border border-[#30363d] px-4 py-2 rounded-md text-[10px] mono hover:bg-[#30363d] transition">git push origin hire</a>
+        </div>
+    </nav>
+
+    <header class="max-w-5xl mx-auto pt-32 pb-20 px-6">
+        <div class="terminal-window overflow-hidden">
+            <div class="bg-[#161b22] px-4 py-2 border-b border-[#30363d] flex gap-2">
+                <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+            </div>
+            <div class="p-8 md:p-12 space-y-6">
+                <div class="mono text-sm md:text-base">
+                    <p class="text-[#238636]">>>> Lalit.init_skills()</p>
+                    <h1 class="text-4xl md:text-7xl font-black text-white mt-4 tracking-tight">
+                        Cloud Arch <span class="text-slate-500">&</span> <br><span class="code-gradient">AI-Powered Designer.</span>
+                    </h1>
+                    <p class="mt-6 text-slate-400 max-w-2xl leading-relaxed">
+                        Architecture builder on AWS, security specialist, and digital creator. I leverage AI tools and creative software to build high-performance products.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#work" class="bg-[#238636] text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-[#2ea043] transition shadow-lg shadow-green-900/20">Execute Projects</a>
+                    <a href="https://www.linkedin.com/in/buildwithlalit/" target="_blank" class="bg-[#30363d] text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-[#484f58] transition">View Socials</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="work" class="max-w-5xl mx-auto py-10 px-6 space-y-12">
+        <h2 class="mono text-xl font-bold border-b border-[#30363d] pb-4 text-white uppercase tracking-widest italic">01. active_deployments</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="group border border-[#30363d] bg-[#0d1117] p-8 rounded-2xl hover:bg-[#161b22] transition-all">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="mono text-[10px] text-blue-400 font-bold">[ status: live_infra ]</span>
+                    <i class="fas fa-server text-xl text-slate-600 group-hover:text-blue-400"></i>
+                </div>
+                <h4 class="text-2xl font-bold text-white mb-2">Prydelix Cloud</h4>
+                <p class="text-sm text-slate-400 mb-6 italic">Secure tech portfolio hosting with 25% cost reduction on AWS.</p>
+                <div class="flex gap-2">
+                    <span class="text-[9px] mono skill-badge px-2 py-1 rounded">AWS</span>
+                    <span class="text-[9px] mono skill-badge px-2 py-1 rounded">PHP / MySQL / HTML / CSS / JS </span>
+                </div>
+            </div>
+            <div class="group border border-[#30363d] bg-[#0d1117] p-8 rounded-2xl hover:bg-[#161b22] transition-all">
+    <div class="flex justify-between items-start mb-6">
+        <a href="https://cine-delhi.netlify.app/" target="_blank" class="mono text-[10px] text-[#238636] font-bold hover:underline">./view_site</a>
+        <i class="fas fa-film text-xl text-slate-600 group-hover:text-[#ff0000] transition-colors duration-300"></i>
+    </div>
+    <h4 class="text-2xl font-bold text-white mb-2">CineDelhi</h4>
+    <p class="text-sm text-slate-400 mb-6 italic">The definitive movie booking experience optimized for the Delhi-NCR commute.</p>
+                <div class="flex gap-2 text-slate-500">
+                    <span class="text-[9px] mono skill-badge px-2 py-1 rounded">NETLIFY</span>
+                    <span class="text-[9px] mono skill-badge px-2 py-1 rounded">HTML5 / Tailwind CSS / JS</span>
+                </div>
+            </div>
+            <div class="group border border-[#30363d] bg-[#0d1117] p-8 rounded-2xl hover:bg-[#161b22] transition-all">
+                <div class="flex justify-between items-start mb-6">
+                    <a href="https://yum-road.netlify.app/" target="_blank" class="mono text-[10px] text-[#238636] font-bold hover:underline">./view_site</a>
+                    <i class="fas fa-bolt text-xl text-slate-600 group-hover:text-orange-400"></i>
+                </div>
+                <h4 class="text-2xl font-bold text-white mb-2">YumRoad</h4>
+                <p class="text-sm text-slate-400 mb-6 italic">High-conversion landing page optimized for rapid delivery UX.</p>
+                <div class="flex gap-2 text-slate-500">
+                    <span class="text-[9px] mono skill-badge px-2 py-1 rounded">NETLIFY</span>
+                    <span class="text-[9px] mono skill-badge px-2 py-1 rounded">HTML5 / Tailwind / JS</span>
+                </div>
+            </div>
+            <div class="group border border-[#30363d] bg-[#0d1117] p-8 rounded-2xl hover:bg-[#161b22] transition-all">
+                <div class="flex justify-between items-start mb-6">
+                    <a href="https://riogym.netlify.app/" target="_blank" class="mono text-[10px] text-[#238636] font-bold hover:underline">./view_site</a>
+                    
+                    <i class="fas fa-dumbbell text-xl text-slate-600 group-hover:text-[#ff0000] transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(255,0,0,0.7)]"></i>
+                </div>
+
+                <h4 class="text-2xl font-bold text-white mb-2">RIO GYM</h4>
+
+                <p class="text-sm text-slate-400 mb-6 italic leading-relaxed">
+                    High-conversion fitness ecosystem featuring a <span class="text-slate-200 font-semibold text-[13px]">sophisticated 'Dual-Shift' (5-10 AM/PM) logic</span>, interactive BMI tools, and a dark-themed UI optimized for local SEO.
+                </p>
+
+                <div class="flex flex-wrap gap-2 text-slate-500">
+                    <span class="text-[9px] mono border border-slate-800 px-2 py-1 rounded bg-[#161b22]">NEXT.JS</span>
+                    <span class="text-[9px] mono border border-slate-800 px-2 py-1 rounded bg-[#161b22]">TAILWIND CSS</span>
+                    <span class="text-[9px] mono border border-slate-800 px-2 py-1 rounded bg-[#161b22]">JS / API</span>
+                </div>
+          </div>
+            <!-- Theme Park -->
+          <div class="group border border-[#30363d] bg-[#0d1117] p-8 rounded-2xl hover:bg-[#161b22] transition-all">
+              <div class="flex justify-between items-start mb-6">
+                  <a href="https://godxdrift.github.io/Theme-park/" target="_blank" class="mono text-[10px] text-[#238636] font-bold hover:underline">./view_site</a>
+                  <i class="fas fa-tree text-xl text-slate-600 group-hover:text-green-500 transition-colors duration-300"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-white mb-2">Theme Park</h4>
+              <p class="text-sm text-slate-400 mb-6 italic">Interactive landing page concept for a modern amusement park.</p>
+              <div class="flex gap-2">
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">HTML</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">CSS</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">JavaScript</span>
+              </div>
+          </div>
+          
+          <!-- EPIA Fertility -->
+          <div class="group border border-[#30363d] bg-[#0d1117] p-8 rounded-2xl hover:bg-[#161b22] transition-all">
+              <div class="flex justify-between items-start mb-6">
+                  <a href="https://godxdrift.github.io/Epia-fertility/" target="_blank" class="mono text-[10px] text-[#238636] font-bold hover:underline">./view_site</a>
+                  <i class="fas fa-heartbeat text-xl text-slate-600 group-hover:text-pink-500 transition-colors duration-300"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-white mb-2">EPIA Fertility</h4>
+              <p class="text-sm text-slate-400 mb-6 italic">Healthcare website concept for fertility clinic services.</p>
+              <div class="flex gap-2">
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">HTML</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">CSS</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">JavaScript</span>
+              </div>
+          </div>
+          
+          <!-- Shriram Pharmacy -->
+          <div class="group border border-[#30363d] bg-[#0d1117] p-8 rounded-2xl hover:bg-[#161b22] transition-all">
+              <div class="flex justify-between items-start mb-6">
+                  <a href="https://godxdrift.github.io/Shriram-pharmacy/" target="_blank" class="mono text-[10px] text-[#238636] font-bold hover:underline">./view_site</a>
+                  <i class="fas fa-pills text-xl text-slate-600 group-hover:text-blue-500 transition-colors duration-300"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-white mb-2">Shriram Pharmacy</h4>
+              <p class="text-sm text-slate-400 mb-6 italic">Modern pharmacy website with clean medical UI.</p>
+              <div class="flex gap-2">
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">HTML</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">CSS</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">JavaScript</span>
+              </div>
+          </div>
+          
+          <!-- Alankar Restaurant -->
+          <div class="group border border-[#30363d] bg-[#0d1117] p-8 rounded-2xl hover:bg-[#161b22] transition-all">
+              <div class="flex justify-between items-start mb-6">
+                  <a href="https://godxdrift.github.io/Alankar-restaurant/" target="_blank" class="mono text-[10px] text-[#238636] font-bold hover:underline">./view_site</a>
+                  <i class="fas fa-utensils text-xl text-slate-600 group-hover:text-orange-500 transition-colors duration-300"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-white mb-2">Alankar Restaurant</h4>
+              <p class="text-sm text-slate-400 mb-6 italic">Restaurant website with elegant dining UI.</p>
+              <div class="flex gap-2">
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">HTML</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">CSS</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">JavaScript</span>
+              </div>
+          </div>
+          
+          <!-- Veloura -->
+          <div class="group border border-[#30363d] bg-[#0d1117] p-8 rounded-2xl hover:bg-[#161b22] transition-all">
+              <div class="flex justify-between items-start mb-6">
+                  <a href="https://godxdrift.github.io/Veloura/" target="_blank" class="mono text-[10px] text-[#238636] font-bold hover:underline">./view_site</a>
+                  <i class="fas fa-spa text-xl text-slate-600 group-hover:text-purple-500 transition-colors duration-300"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-white mb-2">Veloura Skincare</h4>
+              <p class="text-sm text-slate-400 mb-6 italic">Luxury skincare landing page design.</p>
+              <div class="flex gap-2">
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">HTML</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">CSS</span>
+              </div>
+          </div>
+          
+          <!-- Royal Bawarchi -->
+          <div class="group border border-[#30363d] bg-[#0d1117] p-8 rounded-2xl hover:bg-[#161b22] transition-all">
+              <div class="flex justify-between items-start mb-6">
+                  <a href="https://godxdrift.github.io/Royal-bawarchi/" target="_blank" class="mono text-[10px] text-[#238636] font-bold hover:underline">./view_site</a>
+                  <i class="fas fa-drumstick-bite text-xl text-slate-600 group-hover:text-red-500 transition-colors duration-300"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-white mb-2">Royal Bawarchi</h4>
+              <p class="text-sm text-slate-400 mb-6 italic">Restaurant UI concept for Indian cuisine.</p>
+              <div class="flex gap-2">
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">HTML</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">CSS</span>
+              </div>
+          </div>
+          
+          <!-- IT Partner -->
+          <div class="group border border-[#30363d] bg-[#0d1117] p-8 rounded-2xl hover:bg-[#161b22] transition-all">
+              <div class="flex justify-between items-start mb-6">
+                  <a href="https://godxdrift.github.io/It-partner/" target="_blank" class="mono text-[10px] text-[#238636] font-bold hover:underline">./view_site</a>
+                  <i class="fas fa-server text-xl text-slate-600 group-hover:text-blue-400 transition-colors duration-300"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-white mb-2">IT Partner</h4>
+              <p class="text-sm text-slate-400 mb-6 italic">Corporate IT services website template.</p>
+              <div class="flex gap-2">
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">HTML</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">CSS</span>
+              </div>
+          </div>
+          
+          <!-- Cinnabar -->
+          <div class="group border border-[#30363d] bg-[#0d1117] p-8 rounded-2xl hover:bg-[#161b22] transition-all">
+              <div class="flex justify-between items-start mb-6">
+                  <a href="https://godxdrift.github.io/Cinnabar/" target="_blank" class="mono text-[10px] text-[#238636] font-bold hover:underline">./view_site</a>
+                  <i class="fas fa-fire text-xl text-slate-600 group-hover:text-red-600 transition-colors duration-300"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-white mb-2">Cinnabar</h4>
+              <p class="text-sm text-slate-400 mb-6 italic">Restaurant landing page with bold food visuals.</p>
+              <div class="flex gap-2">
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">HTML</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">CSS</span>
+              </div>
+          </div>
+          
+          <!-- Lajawab -->
+          <div class="group border border-[#30363d] bg-[#0d1117] p-8 rounded-2xl hover:bg-[#161b22] transition-all">
+              <div class="flex justify-between items-start mb-6">
+                  <a href="https://godxdrift.github.io/Lajawab/" target="_blank" class="mono text-[10px] text-[#238636] font-bold hover:underline">./view_site</a>
+                  <i class="fas fa-pepper-hot text-xl text-slate-600 group-hover:text-yellow-500 transition-colors duration-300"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-white mb-2">Lajawab</h4>
+              <p class="text-sm text-slate-400 mb-6 italic">Indian restaurant themed landing page.</p>
+              <div class="flex gap-2">
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">HTML</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">CSS</span>
+              </div>
+          </div>
+          
+          <!-- NewsOnGold -->
+          <div class="group border border-[#30363d] bg-[#0d1117] p-8 rounded-2xl hover:bg-[#161b22] transition-all">
+              <div class="flex justify-between items-start mb-6">
+                  <a href="https://godxdrift.github.io/NewsOnGold/" target="_blank" class="mono text-[10px] text-[#238636] font-bold hover:underline">./view_site</a>
+                  <i class="fas fa-newspaper text-xl text-slate-600 group-hover:text-yellow-400 transition-colors duration-300"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-white mb-2">NewsOnGold</h4>
+              <p class="text-sm text-slate-400 mb-6 italic">News portal UI focused on gold market updates.</p>
+              <div class="flex gap-2">
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">HTML</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">CSS</span>
+                  <span class="text-[9px] mono skill-badge px-2 py-1 rounded">JavaScript</span>
+              </div>
+          </div>
+            
+            
+        </div>
+    </main>
+
+    <section id="stack" class="max-w-5xl mx-auto py-24 px-6 space-y-16">
+        <h2 class="mono text-xl font-bold border-b border-[#30363d] pb-4 text-white uppercase tracking-widest italic">02. technical_toolbox</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="space-y-6">
+                <h3 class="mono text-[10px] text-[#238636] font-bold tracking-[0.3em] uppercase">Cloud Infrastructure</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
+                        <i class="fab fa-aws text-xl text-orange-400"></i>
+                        <span class="text-[9px] mono uppercase">AWS Ops</span>
+                    </div>
+                    <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
+                        <i class="fab fa-linux text-xl text-white"></i>
+                        <span class="text-[9px] mono uppercase">Linux</span>
+                    </div>
+                    <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
+                        <i class="fas fa-shield-halved text-xl text-blue-400"></i>
+                        <span class="text-[9px] mono uppercase">Security</span>
+                    </div>
+                    <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
+                        <i class="fas fa-network-wired text-xl text-purple-400"></i>
+                        <span class="text-[9px] mono uppercase">VPC/DNS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h3 class="mono text-[10px] text-pink-500 font-bold tracking-[0.3em] uppercase">Creative Engine</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
+                        <i class="fas fa-palette text-xl text-blue-500"></i>
+                        <span class="text-[9px] mono uppercase">Photoshop</span>
+                    </div>
+                    <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
+                        <i class="fas fa-video text-xl text-green-400"></i>
+                        <span class="text-[9px] mono uppercase">CapCut</span>
+                    </div>
+                    <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
+                        <i class="fas fa-paint-brush text-xl text-cyan-400"></i>
+                        <span class="text-[9px] mono uppercase">Canva</span>
+                    </div>
+                    <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
+                        <i class="fab fa-figma text-xl text-orange-500"></i>
+                        <span class="text-[9px] mono uppercase">Figma</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h3 class="mono text-[10px] text-blue-400 font-bold tracking-[0.3em] uppercase">AI & Dev Productivity</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
+                        <i class="fas fa-robot text-xl text-indigo-400"></i>
+                        <span class="text-[9px] mono uppercase">ChatGPT/LLMs</span>
+                    </div>
+                    <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
+                        <i class="fas fa-code text-xl text-yellow-400"></i>
+                        <span class="text-[9px] mono uppercase">Copilot</span>
+                    </div>
+                    <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
+                        <i class="fas fa-wand-magic-sparkles text-xl text-pink-400"></i>
+                        <span class="text-[9px] mono uppercase">Midjourney</span>
+                    </div>
+                    <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
+                        <i class="fas fa-brain text-xl text-red-400"></i>
+                        <span class="text-[9px] mono uppercase">AI Prompting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="edu" class="max-w-5xl mx-auto py-24 px-6 border-t border-[#30363d]">
+        <div class="flex flex-col md:flex-row gap-12">
+            <div class="flex-1 space-y-8">
+                <h3 class="mono text-white tracking-widest uppercase text-sm font-bold">// education_track</h3>
+                <div class="space-y-6">
+                    <div class="border-l-2 border-[#238636] pl-6">
+                        <h4 class="text-white font-bold">BCA Cloud & Cybersecurity</h4>
+                        <p class="text-xs text-slate-500 uppercase mt-1 italic">Amity University | 2024 - Present</p>
+                    </div>
+                    <div class="border-l-2 border-[#238636] pl-6">
+                        <h4 class="text-white font-bold">High School (XII)</h4>
+                        <p class="text-xs text-slate-500 uppercase mt-1 italic"> Govt. Boys Sr. Sec. School | 2023 - 2024</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 bg-[#0d1117] border border-[#30363d] p-8 rounded-2xl">
+                <h3 class="mono text-white tracking-widest uppercase text-sm font-bold mb-6">verify_status</h3>
+                <div class="space-y-3">
+                    <a href="https://amigo.amityonline.com/mod/customcert/verify_certificate.php?code=GCAyb3sUQz&qrcode=1" target="_blank" class="flex justify-between items-center text-xs mono p-3 hover:bg-[#161b22] rounded transition">
+                        <span>> advanced_excel.log</span>
+                        <span class="text-[#238636]">[VERIFIED]</span>
+                    </a>
+                    <a href="https://amigo.amityonline.com/mod/customcert/verify_certificate.php?code=tp3eUfChTu&qrcode=1" target="_blank" class="flex justify-between items-center text-xs mono p-3 hover:bg-[#161b22] rounded transition">
+                        <span>> basic_maths.log</span>
+                        <span class="text-[#238636]">[VERIFIED]</span>
+                    </a>
+                    <a href="" target="_blank" class="flex justify-between items-center text-xs mono p-3 hover:bg-[#161b22] rounded transition">
+                        <span>> Aws_Certs.log</span>
+                        <span class="text-[#238634]">[Prepping]</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="max-w-5xl mx-auto py-12 px-6 text-center border-t border-[#30363d]">
+        <div class="flex justify-center gap-6 mb-6">
+            <a href="https://www.linkedin.com/in/buildwithlalit/" target="_blank" class="text-slate-500 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+            <a href="mailto:lalshakya27@gmail.com" class="text-slate-500 hover:text-white transition"><i class="fas fa-envelope text-xl"></i></a>
+        </div>
+        <p class="mono text-[10px] text-slate-600 uppercase tracking-[0.4em]">
+            System Status: Optimized | Lalit Shakya © 2026
+        </p>
+    </footer>
+
+</body>
+</html>
