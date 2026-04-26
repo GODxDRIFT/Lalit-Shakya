@@ -707,23 +707,25 @@
       <p class="mono text-[10px] text-slate-500 mb-1">E-Commerce · Payment Gateway Integration</p>
 
       <p class="text-sm text-slate-400 mb-5 italic leading-relaxed">
-        Integrated PayU LATAM inline payment gateway into Walon Sports, a Latin American e-commerce platform. Implemented full secure payment flow — card capture → processing → success/failure handling — with zero redirect friction for customers. Built backend API validation, token-based processing, and real-time order status updates on transaction response.
+        Integrated multiple Peruvian payment methods — PayU LATAM, Yape, and PagoEfectivo — into Walon Sports, a WooCommerce-powered Latin American e-commerce store. Built a unified inline checkout experience covering card payments, QR-based Yape transfers, and cash-voucher PagoEfectivo flows with zero redirect friction. Handled backend API validation, token-based processing, and real-time WooCommerce order status sync on every transaction response.
       </p>
 
       <!-- Features -->
       <div class="space-y-1.5 mb-5">
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Inline checkout (no redirect friction)</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Real-time transaction response handling</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Secure token-based payment flow</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Error handling + fallback logic for failed payments</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Order status sync on payment completion</div>
+        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>PayU LATAM inline card checkout (no redirect)</div>
+        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Yape QR-based mobile payment integration</div>
+        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>PagoEfectivo cash-voucher flow implementation</div>
+        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>WooCommerce order status sync on transaction response</div>
+        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Error handling + fallback logic for all 3 gateways</div>
       </div>
 
       <div class="flex flex-wrap gap-2">
         <span class="text-[9px] mono client-badge px-2 py-1 rounded">JavaScript</span>
         <span class="text-[9px] mono client-badge px-2 py-1 rounded">PHP</span>
+        <span class="text-[9px] mono client-badge px-2 py-1 rounded">WooCommerce</span>
         <span class="text-[9px] mono client-badge px-2 py-1 rounded">PayU LATAM API</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Payment Gateway</span>
+        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Yape</span>
+        <span class="text-[9px] mono client-badge px-2 py-1 rounded">PagoEfectivo</span>
       </div>
     </div>
 
@@ -812,6 +814,14 @@
         <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
           <i class="fas fa-fire-flame-curved text-xl text-orange-400"></i>
           <span class="text-[9px] mono uppercase">Firebase</span>
+        </div>
+        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
+          <i class="fab fa-wordpress text-xl text-blue-300"></i>
+          <span class="text-[9px] mono uppercase">WordPress</span>
+        </div>
+        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
+          <i class="fas fa-cart-shopping text-xl text-purple-400"></i>
+          <span class="text-[9px] mono uppercase">WooCommerce</span>
         </div>
       </div>
     </div>
