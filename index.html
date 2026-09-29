@@ -254,19 +254,19 @@
     .card-project-image {
       display: block;
       width: calc(100% + 4rem);
-      height: 180px;
+      max-width: none;            /* Tailwind preflight img{max-width:100%} was shrinking the image */
+      height: auto;
+      aspect-ratio: 16 / 9;       /* full website screenshot visible, no awkward crop */
       margin: -2rem -2rem 1.5rem;
       object-fit: cover;
-      object-position: left center;
+      object-position: top center;
+      background: #0d1117;
       border-bottom: 1px solid rgba(88,166,255,0.18);
-      transform: scale(1.08);
-      transform-origin: left center;
-      transition: transform 0.35s ease, filter 0.35s ease;
+      transition: filter 0.35s ease;
     }
     .project-card:hover .card-project-image,
     .client-card:hover .card-project-image {
-      transform: scale(1.12);
-      filter: saturate(1.08);
+      filter: saturate(1.1) brightness(1.05);
     }
 
     /* SCROLL REVEAL */
