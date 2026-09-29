@@ -251,6 +251,22 @@
       box-shadow: 0 12px 32px rgba(88,166,255,0.1);
     }
 
+    .card-project-image {
+      display: block;
+      width: calc(100% + 4rem);
+      height: 180px;
+      margin: -2rem -2rem 1.5rem;
+      object-fit: cover;
+      object-position: center;
+      border-bottom: 1px solid rgba(88,166,255,0.18);
+      transition: transform 0.35s ease, filter 0.35s ease;
+    }
+    .project-card:hover .card-project-image,
+    .client-card:hover .card-project-image {
+      transform: scale(1.025);
+      filter: saturate(1.08);
+    }
+
     /* SCROLL REVEAL */
     .reveal {
       opacity: 0;
@@ -496,6 +512,7 @@
 
     <!-- 4. Gold Field Public School -->
     <div class="project-card group reveal">
+      <img class="card-project-image" src="goldfield.jpg" alt="Gold Field Public School website preview" loading="lazy">
       <div class="absolute top-3 right-3 mono text-[8px] text-slate-600">[ client ]</div>
       <div class="flex justify-between items-start mb-5">
         <a href="https://gold-field-public-school.vercel.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
@@ -515,6 +532,7 @@
 
     <!-- 5. Doctor Affairz -->
     <div class="project-card group reveal">
+      <img class="card-project-image" src="doctoraffairz.jpg" alt="Doctor Affairz website preview" loading="lazy">
       <div class="absolute top-3 right-3 mono text-[8px] text-slate-600">[ client ]</div>
       <div class="flex justify-between items-start mb-5">
         <a href="https://doctor-affairz.vercel.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
@@ -534,6 +552,7 @@
 
     <!-- 6. The Game Cafe -->
     <div class="project-card group reveal">
+      <img class="card-project-image" src="thegamecafe.jpg" alt="The Game Cafe website preview" loading="lazy">
       <div class="absolute top-3 right-3 mono text-[8px] text-slate-600">[ client ]</div>
       <div class="flex justify-between items-start mb-5">
         <a href="https://the-game-caf.vercel.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
@@ -553,6 +572,7 @@
 
     <!-- 7. Tasnim Interior -->
     <div class="project-card group reveal">
+      <img class="card-project-image" src="tasnim.jpg" alt="Tasnim Interior website preview" loading="lazy">
       <div class="absolute top-3 right-3 mono text-[8px] text-slate-600">[ client ]</div>
       <div class="flex justify-between items-start mb-5">
         <a href="https://tasnim-interior.vercel.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
@@ -572,6 +592,7 @@
 
     <!-- 10. IT Partner -->
     <div class="project-card group reveal">
+      <img class="card-project-image" src="itpartner.jpg" alt="IT Partner website preview" loading="lazy">
       <div class="absolute top-3 right-3 mono text-[8px] text-slate-600">[ personal ]</div>
       <div class="flex justify-between items-start mb-5">
         <a href="https://godxdrift.github.io/It-partner/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
@@ -590,6 +611,7 @@
 
     <!-- 11. Cinnabar -->
     <div class="project-card group reveal">
+      <img class="card-project-image" src="cinnabar.jpg" alt="Cinnabar website preview" loading="lazy">
       <div class="absolute top-3 right-3 mono text-[8px] text-slate-600">[ personal ]</div>
       <div class="flex justify-between items-start mb-5">
         <a href="https://godxdrift.github.io/Cinnabar/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
@@ -628,6 +650,7 @@
 
     <!-- CLIENT: Shakya Enterprises -->
     <div class="client-card group reveal">
+      <img class="card-project-image" src="shakya-enterprises.jpg" alt="Shakya Enterprises website preview" loading="lazy">
       <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
         <span class="mono text-[8px] text-[#58a6ff]">[ CLIENT PROJECT ]</span>
         <span class="mono text-[8px] text-slate-500">Live Website</span>
@@ -710,6 +733,7 @@
 
     <!-- CLIENT 1: Walon Sports -->
     <div class="client-card group reveal">
+      <img class="card-project-image" src="walon.jpg" alt="Walon Sports website preview" loading="lazy">
       <!-- Badges -->
       <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
         <span class="mono text-[8px] text-[#58a6ff]">[ CLIENT PROJECT ]</span>
@@ -756,6 +780,7 @@
 
     <!-- CLIENT 2: Biziffy -->
     <div class="client-card group reveal">
+      <img class="card-project-image" src="biziffy.jpg" alt="Biziffy website preview" loading="lazy">
       <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
         <span class="mono text-[8px] text-[#58a6ff]">[ CLIENT PROJECT ]</span>
         <span class="mono text-[8px] text-slate-500">via Freelancer.com</span>
@@ -798,6 +823,7 @@
 
     <!-- CLIENT 3: Artt of Houz -->
     <div class="client-card group reveal">
+      <img class="card-project-image" src="arttofhouz.jpg" alt="Artt of Houz website preview" loading="lazy">
       <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
         <span class="mono text-[8px] text-[#58a6ff]">[ CLIENT PROJECT ]</span>
         <span class="mono text-[8px] text-slate-500">Live Website</span>
@@ -839,6 +865,7 @@
 
     <!-- CLIENT 4: Wash Experts Car Wash -->
     <div class="client-card group reveal">
+      <img class="card-project-image" src="expertcarwash.jpg" alt="Wash Experts Car Wash website preview" loading="lazy">
       <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
         <span class="mono text-[8px] text-[#58a6ff]">[ CLIENT PROJECT ]</span>
         <span class="mono text-[8px] text-slate-500">Website Audit & Fixes</span>
