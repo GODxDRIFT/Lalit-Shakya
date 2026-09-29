@@ -1,1484 +1,755 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Full Stack Developer & Freelancer. Delivered PayU LATAM, Google Maps API, and WordPress CMS integrations for real clients. 13+ live projects. Available for hire.">
-  <meta name="keywords" content="Lalit Shakya, Full Stack Developer, Cloud Engineer, Freelancer, React, Next.js, PHP, Firebase, AWS, Payment Gateway, Google Maps API, PayU, web developer India, hire developer">
-  <meta name="author" content="Lalit Shakya">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Lalit Shakya | Full Stack Dev · Cloud Engineer · Freelancer">
-  <meta property="og:description" content="Full Stack Developer & Freelancer. Delivered PayU LATAM, Google Maps API, and WordPress CMS integrations for real clients. 13+ live projects. Available for hire.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://godxdrift.github.io/Lalit-Shakya/">
-  <meta property="og:image" content="https://godxdrift.github.io/Lalit-Shakya/images/pfp.jpg">
-  <link rel="canonical" href="https://godxdrift.github.io/Lalit-Shakya/">
-  <title>Lalit Shakya | Full Stack Dev · Cloud Engineer · Freelancer</title>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Lalit Shakya",
-    "url": "https://godxdrift.github.io/Lalit-Shakya/",
-    "email": "lalshakya27@gmail.com",
-    "sameAs": [
-      "https://github.com/GODxDRIFT",
-      "https://www.linkedin.com/in/buildwithlalit/",
-      "https://www.freelancer.in/u/lalit66"
-    ],
-    "jobTitle": "Full Stack Developer & Cloud Engineer",
-    "hasOccupation": {
-      "@type": "Occupation",
-      "name": "Payment Gateway Integration, Maps API Integration, Full Stack Development"
-    },
-    "knowsAbout": ["JavaScript", "React.js", "PHP", "Google Maps API", "PayU LATAM", "AWS", "Firebase", "Next.js", "Tailwind CSS"]
-  }
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lalit Shakya - Full Stack Dev &amp; Cloud Freelancer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            handwritten: ['"Caveat"', 'cursive'],
+          },
+          colors: {
+            primary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            },
+            surface: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              800: '#0f172a',
+              900: '#020617',
+            }
+          },
+          boxShadow: {
+            'subtle': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+            'card': '0 10px 30px -4px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02)',
+          }
+        }
+      }
+    }
   </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "EMI Calculator",
-    "description": "A modern and responsive EMI Calculator built using React and Tailwind CSS. Calculates Monthly EMI, Total Interest Payable, and Total Repayment instantly with input validation and mobile-first UI.",
-    "url": "https://emi-calculator-theta-gules.vercel.app/",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Web",
-    "author": {
-      "@type": "Person",
-      "name": "GODxDRIFT",
-      "url": "https://github.com/GODxDRIFT"
-    },
-    "codeRepository": "https://github.com/GODxDRIFT/EMI-Calculator",
-    "programmingLanguage": ["JavaScript", "React"],
-    "offers": {"@type": "Offer", "url": "https://emi-calculator-theta-gules.vercel.app/"}
-  }
-  </script>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@300;400;600;700;900&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-    :root {
-      --bg: #010409;
-      --card-bg: #0d1117;
-      --border: #30363d;
-      --accent: #238636;
-      --accent-hover: #2ea043;
-      --blue: #58a6ff;
-      --purple: #bc8cff;
-      --text: #c9d1d9;
-    }
-
-    [data-theme="light"] {
-      --bg: #f4f7fb;
-      --card-bg: #ffffff;
-      --border: #d8e0ea;
-      --text: #1f2937;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      transition: background-color 0.25s ease, color 0.25s ease;
-    }
-
-    [data-theme="light"] body::after { opacity: 0.08; }
-    [data-theme="light"] .nav-blur { background: rgba(244,247,251,0.9); }
-    [data-theme="light"] .terminal-window,
-    [data-theme="light"] .project-card,
-    [data-theme="light"] .client-card,
-    [data-theme="light"] .contact-card,
-    [data-theme="light"] .stat-card { box-shadow: 0 12px 30px rgba(31,41,55,0.08); }
-    [data-theme="light"] .project-card,
-    [data-theme="light"] .client-card { background: #ffffff; border-color: #d8e0ea; }
-    [data-theme="light"] .project-card:hover,
-    [data-theme="light"] .client-card:hover,
-    [data-theme="light"] .contact-card:hover { background: #f8fafc; }
-    [data-theme="light"] .text-white { color: #172033 !important; }
-    [data-theme="light"] .text-slate-300 { color: #344054 !important; }
-    [data-theme="light"] .text-slate-400 { color: #526176 !important; }
-    [data-theme="light"] .text-slate-500 { color: #66758a !important; }
-    [data-theme="light"] .text-slate-600 { color: #738198 !important; }
-    [data-theme="light"] .bg-\[\#161b22\] { background: #e9eef5 !important; }
-    [data-theme="light"] .bg-\[\#0d1117\] { background: #ffffff !important; }
-    [data-theme="light"] .border-\[\#30363d\] { border-color: #d8e0ea !important; }
-    [data-theme="light"] .mobile-theme-surface { background: rgba(255,255,255,0.96); }
-    [data-theme="light"] .theme-toggle { color: #344054; border-color: #c8d2df; background: #ffffff; }
-    [data-theme="light"] .theme-toggle:hover { color: #172033; background: #e9eef5; }
-
-    .theme-toggle {
+<style data-purpose="custom-decorations">
+    .badge-pill {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      border: 1px solid #30363d;
-      border-radius: 8px;
-      color: #c9d1d9;
-      background: rgba(13,17,23,0.75);
-      transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
     }
-    .theme-toggle:hover { color: #fff; background: #161b22; border-color: #58a6ff; }
-
-    ::selection { background: rgba(88,166,255,0.25); }
-
-    .mono { font-family: 'Fira Code', monospace; }
-
-    /* NAV */
-    .nav-blur {
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      background: rgba(1, 4, 9, 0.85);
+    .laptop-frame {
+      perspective: 1200px;
     }
-
-    /* HAMBURGER */
-    #mobile-menu {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease, opacity 0.3s ease;
-      opacity: 0;
-    }
-    #mobile-menu.open {
-      max-height: 300px;
-      opacity: 1;
-    }
-
-    /* TERMINAL */
-    .terminal-window {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(48,54,61,0.5);
-    }
-
-    /* CODE GRADIENT */
-    .code-gradient {
-      background: linear-gradient(90deg, #58a6ff, #bc8cff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* TYPING CURSOR */
-    .cursor {
-      display: inline-block;
-      width: 2px;
-      height: 1em;
-      background: #238636;
-      margin-left: 2px;
-      vertical-align: text-bottom;
-      animation: blink 1s step-end infinite;
-    }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-
-    /* SKILL BADGE */
-    .skill-badge {
-      background: rgba(48, 54, 61, 0.3);
-      border: 1px solid var(--border);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: default;
-    }
-    .skill-badge:hover {
-      border-color: #58a6ff;
-      background: rgba(88,166,255,0.08);
-      transform: translateY(-2px);
-      box-shadow: 0 0 15px rgba(88,166,255,0.15);
-    }
-
-    /* CLIENT BADGE */
-    .client-badge {
-      background: rgba(14, 30, 55, 0.5);
-      border: 1px solid rgba(88,166,255,0.2);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: default;
-    }
-    .client-badge:hover {
-      border-color: rgba(88,166,255,0.5);
-      background: rgba(88,166,255,0.08);
-      transform: translateY(-2px);
-      box-shadow: 0 0 12px rgba(88,166,255,0.12);
-    }
-
-    /* PROJECT CARDS */
-    .project-card {
-      border: 1px solid var(--border);
-      background: var(--card-bg);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .project-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(88,166,255,0.03) 0%, transparent 60%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      border-radius: 16px;
-      pointer-events: none;
-    }
-    .project-card:hover::before { opacity: 1; }
-    .project-card:hover {
-      background: #161b22;
-      border-color: #484f58;
-      transform: translateY(-3px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.4);
-    }
-
-    /* FEATURED PROJECT */
-    .project-card.featured {
-      border: 1px solid transparent;
-      background: linear-gradient(180deg, rgba(13,17,23,0.9), rgba(10,14,18,0.95));
-      box-shadow: 0 18px 40px rgba(56,94,165,0.12), 0 4px 18px rgba(0,0,0,0.6);
-      border-radius: 18px;
-    }
-    .project-card.featured::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 18px;
-      pointer-events: none;
-      background: linear-gradient(90deg, rgba(88,166,255,0.03), rgba(188,140,255,0.03));
-    }
-    .featured-badge {
-      display: inline-block;
-      font-family: 'Fira Code', monospace;
-      font-size: 10px;
-      color: white;
-      background: linear-gradient(90deg,#58a6ff,#bc8cff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      border: 1px solid rgba(88,166,255,0.12);
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      backdrop-filter: blur(6px);
-    }
-
-    /* CLIENT CARDS */
-    .client-card {
-      border: 1px solid rgba(88,166,255,0.25);
-      background: var(--card-bg);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .client-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(88,166,255,0.06) 0%, transparent 60%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      border-radius: 16px;
-      pointer-events: none;
-    }
-    .client-card:hover::before { opacity: 1; }
-    .client-card:hover {
-      background: #0a1628;
-      border-color: rgba(88,166,255,0.5);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 32px rgba(88,166,255,0.1);
-    }
-
-    .card-project-image {
-      display: block;
-      width: calc(100% + 4rem);
-      max-width: none;            /* Tailwind preflight img{max-width:100%} was shrinking the image */
-      height: auto;
-      aspect-ratio: 16 / 9;       /* full website screenshot visible, no awkward crop */
-      margin: -2rem -2rem 1.5rem;
-      object-fit: cover;
-      object-position: top center;
-      background: #0d1117;
-      border-bottom: 1px solid rgba(88,166,255,0.18);
-      transition: filter 0.35s ease;
-    }
-    .project-card:hover .card-project-image,
-    .client-card:hover .card-project-image {
-      filter: saturate(1.1) brightness(1.05);
-    }
-
-    /* SCROLL REVEAL */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* EDUCATION BORDER GROW */
-    .edu-border {
-      border-left: 2px solid transparent;
-      transition: border-color 0.6s ease;
-      padding-left: 1.5rem;
-    }
-    .edu-border.visible { border-color: #238636; }
-
-    /* STAT COUNTER */
-    .stat-card {
-      background: rgba(35, 134, 54, 0.08);
-      border: 1px solid rgba(35, 134, 54, 0.25);
-      border-radius: 10px;
-      padding: 0.75rem 1.25rem;
-      text-align: center;
-      min-width: 130px;
-    }
-
-    /* CONTACT CARD */
-    .contact-card {
-      border: 1px solid var(--border);
-      background: var(--card-bg);
-      border-radius: 14px;
-      padding: 1.75rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.75rem;
-      text-align: center;
-      cursor: pointer;
-      transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .contact-card:hover {
-      border-color: rgba(88,166,255,0.45);
-      background: #0a1628;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 28px rgba(88,166,255,0.1);
-    }
-
-    /* STATUS BAR */
-    .status-bar {
-      background: rgba(35,134,54,0.07);
-      border: 1px solid rgba(35,134,54,0.2);
-      border-radius: 8px;
-      padding: 0.5rem 1rem;
-      font-size: 11px;
-    }
-
-    /* NAV ACTIVE */
-    .nav-link.active { color: #58a6ff !important; }
-
-    /* FREELANCER BADGE */
-    .fl-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      border: 1px solid var(--border);
-      padding: 0.4rem 1rem;
-      border-radius: 999px;
-      font-size: 10px;
-      color: #94a3b8;
-      font-family: 'Fira Code', monospace;
-      transition: background 0.2s, color 0.2s, border-color 0.2s;
-      text-decoration: none;
-    }
-    .fl-badge:hover {
-      background: var(--border);
-      color: #fff;
-      border-color: #58a6ff;
-    }
-
-    /* HERO FADE IN */
-    .hero-content {
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .hero-content.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* SECTION LABEL */
-    .section-label {
-      font-family: 'Fira Code', monospace;
-      font-size: 11px;
-      color: #58a6ff;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.5rem;
-    }
-
-    /* NOISE OVERLAY for bg depth */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.4;
+    .laptop-screen {
+      transform: rotateY(-14deg) rotateX(8deg);
+      box-shadow: -20px 25px 40px -10px rgba(0, 0, 0, 0.25);
     }
   </style>
 </head>
-<body class="selection:bg-blue-500/30 relative">
-
-<!-- ══════════════════════════════════════════ NAVBAR ══════════════════════════════════════════ -->
-<nav class="fixed top-0 w-full z-50 border-b border-[#30363d] nav-blur" id="navbar">
-  <div class="max-w-6xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
-
-    <!-- Logo -->
-    <a href="#" class="mono text-sm font-bold flex items-center gap-1 text-white hover:text-green-400 transition">
-      <span class="text-[#238636]">~/</span><span>lalit-shakya</span>
-    </a>
-
-    <!-- Desktop Nav -->
-    <div class="hidden md:flex gap-6 text-[11px] mono uppercase tracking-widest text-slate-400">
-      <a href="#work"      class="nav-link hover:text-blue-400 transition" data-section="work">./projects</a>
-      <a href="#freelance" class="nav-link hover:text-blue-400 transition" data-section="freelance">./client-work</a>
-      <a href="#stack"     class="nav-link hover:text-blue-400 transition" data-section="stack">./skills</a>
-      <a href="#edu"       class="nav-link hover:text-blue-400 transition" data-section="edu">./education</a>
-      <a href="#contact"   class="nav-link hover:text-blue-400 transition" data-section="contact">./contact</a>
-    </div>
-
-    <!-- CTA + Hamburger -->
-    <div class="flex items-center gap-3">
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme">
-        <i id="theme-icon" class="fas fa-sun text-sm" aria-hidden="true"></i>
-      </button>
-      <a href="mailto:lalshakya27@gmail.com" class="hidden md:inline-flex border border-[#30363d] px-4 py-2 rounded-md text-[10px] mono hover:bg-[#30363d] hover:text-white transition text-slate-300">
-        git push origin hire
-      </a>
-      <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2 rounded focus:outline-none" aria-label="Toggle menu">
-        <span class="block w-5 h-0.5 bg-slate-400 transition-all duration-300" id="hb1"></span>
-        <span class="block w-5 h-0.5 bg-slate-400 transition-all duration-300" id="hb2"></span>
-        <span class="block w-5 h-0.5 bg-slate-400 transition-all duration-300" id="hb3"></span>
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden border-t border-[#30363d] bg-[#010409]/95 mobile-theme-surface">
-    <div class="flex flex-col px-6 py-4 gap-4 mono text-[11px] uppercase tracking-widest text-slate-400">
-      <a href="#work"      class="hover:text-blue-400 transition" onclick="closeMobile()">./projects</a>
-      <a href="#freelance" class="hover:text-blue-400 transition" onclick="closeMobile()">./client-work</a>
-      <a href="#stack"     class="hover:text-blue-400 transition" onclick="closeMobile()">./skills</a>
-      <a href="#edu"       class="hover:text-blue-400 transition" onclick="closeMobile()">./education</a>
-      <a href="#contact"   class="hover:text-blue-400 transition" onclick="closeMobile()">./contact</a>
-      <a href="mailto:lalshakya27@gmail.com" class="border border-[#30363d] px-4 py-2 rounded-md text-center hover:bg-[#30363d] transition mt-2">git push origin hire</a>
-    </div>
-  </div>
+<body class="bg-[#fafbfc] text-slate-800 font-sans antialiased selection:bg-blue-100 selection:text-blue-700">
+<header class="sticky top-0 z-50 bg-[#fafbfc]/90 backdrop-blur-md border-b border-slate-100 transition-all duration-200">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<a class="flex items-center gap-3 group" href="#">
+<div class="w-10 h-10 rounded-xl bg-slate-900 text-white font-bold flex items-center justify-center text-sm shadow-sm group-hover:bg-blue-600 transition-colors">
+          LS
+        </div>
+<div class="flex flex-col leading-tight">
+<span class="font-bold text-slate-900 text-base">Lalit Shakya</span>
+<span class="text-xs text-slate-400 font-medium">Full Stack Developer</span>
+</div>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold text-slate-900 hover:text-blue-600 transition-colors" href="#home">Home</a>
+<a class="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors" href="#projects">Projects</a>
+<a class="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors" href="#clients">Clients</a>
+<a class="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors" href="#toolbox">Tech Stack</a>
+<a class="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors" href="#education">Education</a>
+<a class="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors" href="#contact">Contact</a>
 </nav>
-
-<!-- ══════════════════════════════════════════ HERO ══════════════════════════════════════════ -->
-<header class="max-w-5xl mx-auto pt-28 pb-20 px-4 md:px-6">
-  <div class="terminal-window overflow-hidden">
-    <!-- Title bar -->
-    <div class="bg-[#161b22] px-4 py-3 border-b border-[#30363d] flex items-center gap-2">
-      <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
-      <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
-      <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
-      <span class="mono text-[10px] text-slate-500 ml-4 hidden sm:inline">lalit@portfolio:~$ node init.js</span>
-    </div>
-
-    <div class="p-6 md:p-12 space-y-6">
-      <!-- Typing line -->
-      <div class="mono text-sm md:text-base">
-        <span class="text-[#238636]" id="typed-text"></span><span class="cursor" id="cursor" style="display:none;"></span>
-      </div>
-
-      <!-- Hero Content — fades in after typing -->
-      <div id="hero-content" class="hero-content space-y-6">
-        <h1 class="text-3xl sm:text-5xl md:text-7xl font-black text-white tracking-tight leading-tight">
-          Full Stack Dev &amp;<br>
-          <span class="code-gradient">Cloud × Freelancer.</span>
-        </h1>
-
-        <p class="text-slate-400 max-w-2xl leading-relaxed text-sm md:text-base">
-          I build high-performance websites, integrate payment gateways, and deploy scalable cloud solutions.
-          Available for freelance projects, collaborations, and internships.
-        </p>
-
-        <!-- Stats -->
-        <div class="flex flex-wrap gap-4 pt-2">
-          <div class="stat-card">
-            <div class="text-2xl font-black text-[#238636] mono" id="stat-projects">0</div>
-            <div class="text-[10px] text-slate-400 mono mt-1">Projects Deployed</div>
-          </div>
-          <div class="stat-card">
-            <div class="text-2xl font-black text-[#238636] mono" id="stat-clients">0</div>
-            <div class="text-[10px] text-slate-400 mono mt-1">Freelance Clients</div>
-          </div>
-          <div class="stat-card">
-            <div class="text-2xl font-black text-[#238636] mono" id="stat-years">0</div>
-            <div class="text-[10px] text-slate-400 mono mt-1">Years Building</div>
-          </div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-100 bg-emerald-50/70 text-emerald-700 text-xs font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Available for Projects
         </div>
-
-        <!-- CTA Buttons -->
-        <div class="flex flex-wrap gap-3 pt-2">
-          <a href="#work" class="bg-[#238636] text-white px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-[#2ea043] transition shadow-lg shadow-green-900/20">
-            View Projects
-          </a>
-          <a href="#freelance" class="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-blue-500 transition shadow-lg shadow-blue-900/20">
-            Client Work
-          </a>
-          <a href="https://github.com/GODxDRIFT" target="_blank" rel="noopener" class="bg-[#30363d] text-white px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-[#484f58] transition">
-            <i class="fab fa-github mr-2"></i>GitHub Profile
-          </a>
-        </div>
-
-        <!-- Status Bar -->
-        <div class="status-bar mono text-[10px] text-slate-400 flex flex-wrap items-center gap-2">
-          <span class="text-[#238636] text-xs">●</span>
-          <span>Available for freelance</span>
-          <span class="text-slate-600">·</span>
-          <span>Last deployed: 2026</span>
-          <span class="text-slate-600">·</span>
-          <span>Status: Open to opportunities</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 transition shadow-sm active:scale-95" href="#contact">
+<span>Let's Talk</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+</a>
+</div>
+</div>
 </header>
-
-<!-- ══════════════════════════════════════ PERSONAL PROJECTS ══════════════════════════════════════ -->
-<main id="work" class="max-w-5xl mx-auto py-16 px-4 md:px-6">
-  <div class="section-label">// built for learning, startups &amp; real-world use cases</div>
-  <h2 class="mono text-xl font-bold border-b border-[#30363d] pb-4 text-white uppercase tracking-widest italic mb-10">
-    01. personal_projects
-  </h2>
-
-  <div class="grid md:grid-cols-2 gap-6" id="projects-grid">
-
-    <!-- EMI Calculator removed per request -->
-
-    <!-- 4. Gold Field Public School -->
-    <div class="project-card group reveal">
-      <img class="card-project-image" src="goldfield.jpg" alt="Gold Field Public School website preview" loading="eager">
-      <div class="absolute top-3 right-3 mono text-[8px] text-slate-600">[ client ]</div>
-      <div class="flex justify-between items-start mb-5">
-        <a href="https://gold-field-public-school.vercel.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
-          <i class="fas fa-arrow-up-right-from-square text-[9px]"></i>
-          View Website
-        </a>
-        <i class="fas fa-graduation-cap text-xl text-slate-600 group-hover:text-blue-400 transition-colors"></i>
-      </div>
-      <h4 class="text-2xl font-bold text-white mb-2">Gold Field Public School</h4>
-      <p class="text-sm text-slate-400 mb-5 italic leading-relaxed">Modern school website focused on trust, admissions, and a welcoming experience for parents and students.</p>
-      <div class="flex flex-wrap gap-2">
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">Vercel</span>
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">Education</span>
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">Conversion</span>
-      </div>
-    </div>
-
-    <!-- 5. Doctor Affairz -->
-    <div class="project-card group reveal">
-      <img class="card-project-image" src="doctoraffairz.jpg" alt="Doctor Affairz website preview" loading="eager">
-      <div class="absolute top-3 right-3 mono text-[8px] text-slate-600">[ client ]</div>
-      <div class="flex justify-between items-start mb-5">
-        <a href="https://doctor-affairz.vercel.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
-          <i class="fas fa-arrow-up-right-from-square text-[9px]"></i>
-          View Website
-        </a>
-        <i class="fas fa-stethoscope text-xl text-slate-600 group-hover:text-emerald-400 transition-colors"></i>
-      </div>
-      <h4 class="text-2xl font-bold text-white mb-2">Doctor Affairz</h4>
-      <p class="text-sm text-slate-400 mb-5 italic leading-relaxed">Healthcare-oriented landing page designed to communicate credibility, services, and a strong first impression.</p>
-      <div class="flex flex-wrap gap-2">
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">Vercel</span>
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">Healthcare</span>
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">UI</span>
-      </div>
-    </div>
-
-    <!-- 6. The Game Cafe -->
-    <div class="project-card group reveal">
-      <img class="card-project-image" src="thegamecafe.jpg" alt="The Game Cafe website preview" loading="lazy">
-      <div class="absolute top-3 right-3 mono text-[8px] text-slate-600">[ client ]</div>
-      <div class="flex justify-between items-start mb-5">
-        <a href="https://the-game-caf.vercel.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
-          <i class="fas fa-arrow-up-right-from-square text-[9px]"></i>
-          View Website
-        </a>
-        <i class="fas fa-gamepad text-xl text-slate-600 group-hover:text-fuchsia-400 transition-colors"></i>
-      </div>
-      <h4 class="text-2xl font-bold text-white mb-2">The Game Cafe</h4>
-      <p class="text-sm text-slate-400 mb-5 italic leading-relaxed">Gaming-focused brand website with bold visuals and an energetic layout built to attract visitors and showcase the experience.</p>
-      <div class="flex flex-wrap gap-2">
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">Vercel</span>
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">Gaming</span>
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">Modern UI</span>
-      </div>
-    </div>
-
-    <!-- 7. Tasnim Interior -->
-    <div class="project-card group reveal">
-      <img class="card-project-image" src="tasnim.jpg" alt="Tasnim Interior website preview" loading="lazy">
-      <div class="absolute top-3 right-3 mono text-[8px] text-slate-600">[ client ]</div>
-      <div class="flex justify-between items-start mb-5">
-        <a href="https://tasnim-interior.vercel.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
-          <i class="fas fa-arrow-up-right-from-square text-[9px]"></i>
-          View Website
-        </a>
-        <i class="fas fa-palette text-xl text-slate-600 group-hover:text-amber-400 transition-colors"></i>
-      </div>
-      <h4 class="text-2xl font-bold text-white mb-2">Tasnim Interior</h4>
-      <p class="text-sm text-slate-400 mb-5 italic leading-relaxed">Interior design website crafted with a sophisticated aesthetic and refined structure to highlight projects and services.</p>
-      <div class="flex flex-wrap gap-2">
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">Vercel</span>
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">Interior</span>
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">Branding</span>
-      </div>
-    </div>
-
-    <!-- 10. IT Partner -->
-    <div class="project-card group reveal">
-      <img class="card-project-image" src="itpartner.jpg" alt="IT Partner website preview" loading="lazy">
-      <div class="absolute top-3 right-3 mono text-[8px] text-slate-600">[ personal ]</div>
-      <div class="flex justify-between items-start mb-5">
-        <a href="https://godxdrift.github.io/It-partner/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
-          <i class="fas fa-arrow-up-right-from-square text-[9px]"></i>
-          View Website
-        </a>
-        <i class="fas fa-server text-xl text-slate-600 group-hover:text-cyan-400 transition-colors"></i>
-      </div>
-      <h4 class="text-2xl font-bold text-white mb-2">IT Partner</h4>
-      <p class="text-sm text-slate-400 mb-5 italic leading-relaxed">Corporate IT services website with a professional layout, service showcases, and clear CTAs for enterprise outreach. Structured for B2B lead generation.</p>
-      <div class="flex flex-wrap gap-2">
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">HTML</span>
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">CSS</span>
-      </div>
-    </div>
-
-    <!-- 11. Cinnabar -->
-    <div class="project-card group reveal">
-      <img class="card-project-image" src="cinnabar.jpg" alt="Cinnabar website preview" loading="lazy">
-      <div class="absolute top-3 right-3 mono text-[8px] text-slate-600">[ personal ]</div>
-      <div class="flex justify-between items-start mb-5">
-        <a href="https://godxdrift.github.io/Cinnabar/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
-          <i class="fas fa-arrow-up-right-from-square text-[9px]"></i>
-          View Website
-        </a>
-        <i class="fas fa-fire text-xl text-slate-600 group-hover:text-red-500 transition-colors"></i>
-      </div>
-      <h4 class="text-2xl font-bold text-white mb-2">Cinnabar</h4>
-      <p class="text-sm text-slate-400 mb-5 italic leading-relaxed">Restaurant landing page with bold food photography sections and a dramatic red-accent visual identity. Built to create appetite appeal and drive foot traffic.</p>
-      <div class="flex flex-wrap gap-2">
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">HTML</span>
-        <span class="text-[9px] mono skill-badge px-2 py-1 rounded">CSS</span>
-      </div>
-    </div>
-
-  </div><!-- /projects-grid -->
+<main>
+<section class="pt-8 pb-16 md:pt-14 md:pb-24 overflow-hidden relative" id="home">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<div class="lg:col-span-7 flex flex-col items-start space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100/80 border border-slate-200/80 rounded-full text-xs font-bold uppercase tracking-wider text-slate-700">
+<span>HI, I'M LALIT SHAKYA 👋</span>
+</div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
+              Full Stack Dev &amp; <br/>
+<span class="text-blue-600">Cloud</span> Freelancer.
+            </h1>
+<p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl">
+              I build high-performance websites, web apps and cloud solutions for businesses. From modern UI/UX to secure cloud deployments — I turn ideas into real products.
+            </p>
+<div class="grid grid-cols-3 gap-3 sm:gap-4 w-full max-w-md pt-1">
+<div class="bg-white border border-slate-200/80 p-3 sm:p-4 rounded-2xl shadow-card text-left">
+<span class="block text-2xl sm:text-3xl font-extrabold text-slate-900">12+</span>
+<span class="text-xs text-slate-500 font-medium">Projects</span>
+</div>
+<div class="bg-white border border-slate-200/80 p-3 sm:p-4 rounded-2xl shadow-card text-left">
+<span class="block text-2xl sm:text-3xl font-extrabold text-slate-900">6+</span>
+<span class="text-xs text-slate-500 font-medium">Client Work</span>
+</div>
+<div class="bg-white border border-slate-200/80 p-3 sm:p-4 rounded-2xl shadow-card text-left">
+<span class="block text-2xl sm:text-3xl font-extrabold text-slate-900">1+</span>
+<span class="text-xs text-slate-500 font-medium">Years Experience</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 shadow-md shadow-blue-500/20 transition active:scale-95" href="#projects">
+<span>View My Work</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+</a>
+<a class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white border border-slate-200/90 text-slate-700 font-semibold text-sm hover:bg-slate-50 transition active:scale-95 shadow-sm" href="#resume">
+<span>Download Resume</span>
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<div class="flex items-center gap-2 text-xs font-medium text-slate-500 pt-2 flex-wrap">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>Open for freelance projects</span>
+<span class="text-slate-300">•</span>
+<span>Web Development</span>
+<span class="text-slate-300">•</span>
+<span>Cloud &amp; DevOps</span>
+<span class="text-slate-300">•</span>
+<span>UI/UX</span>
+</div>
+</div>
+<div class="lg:col-span-5 relative flex justify-center items-center">
+<div class="absolute -top-4 sm:top-2 left-2 sm:left-4 z-20 bg-white/95 backdrop-blur-md border border-slate-200 p-3 rounded-2xl shadow-card flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold font-mono text-sm">
+                &lt;/&gt;
+              </div>
+<div class="text-left text-xs">
+<span class="block text-slate-400 font-semibold uppercase text-[10px]">Currently Working On</span>
+<span class="font-bold text-slate-800">Building cool projects and helping clients grow.</span>
+</div>
+</div>
+<div class="laptop-frame relative w-full max-w-[480px] pt-12 pb-6">
+<div class="laptop-screen rounded-2xl bg-slate-900 border-4 border-slate-800 p-3 sm:p-4 text-slate-100 overflow-hidden shadow-2xl relative">
+<div class="flex items-center justify-between pb-3 border-b border-slate-800">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+</div>
+<div class="text-[11px] font-mono text-slate-500">App.tsx — LalitPortfolio</div>
+<div class="w-8"></div>
+</div>
+<pre class="font-mono text-xs leading-relaxed mt-3 overflow-x-auto text-slate-300"><code><span class="text-purple-400">const</span> <span class="text-blue-400">developer</span> = {
+  <span class="text-sky-300">name</span>: <span class="text-amber-300">'Lalit Shakya'</span>,
+  <span class="text-sky-300">role</span>: <span class="text-amber-300">'Full Stack &amp; Cloud'</span>,
+  <span class="text-sky-300">skills</span>: [<span class="text-emerald-300">'React'</span>, <span class="text-emerald-300">'Node'</span>, <span class="text-emerald-300">'AWS'</span>],
+  <span class="text-sky-300">mission</span>: () =&gt; {
+    <span class="text-purple-400">return</span> <span class="text-amber-300">'Turning ideas into real products'</span>;
+  }
+};</code></pre>
+<div class="mt-4 pt-3 border-t border-slate-800/80 space-y-2">
+<div class="h-2 bg-slate-800 rounded w-3/4"></div>
+<div class="h-2 bg-slate-800 rounded w-1/2"></div>
+<div class="h-2 bg-blue-500/30 rounded w-2/3"></div>
+</div>
+</div>
+<div class="w-[90%] mx-auto h-3 bg-slate-700 rounded-b-xl shadow-lg"></div>
+</div>
+<div class="absolute -bottom-4 right-4 sm:right-6 flex flex-col items-center">
+<span class="font-handwritten text-xl sm:text-2xl text-slate-600 rotate-[-8deg] font-bold">
+                Clean Code, Better Products ↗
+              </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-14 sm:py-20 bg-slate-50/50 border-t border-slate-100" id="projects">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 pb-4 border-b border-slate-200">
+<div>
+<div class="flex items-center gap-3">
+<span class="text-blue-600 font-extrabold tracking-wider text-sm uppercase">01.</span>
+<h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 uppercase tracking-tight">PERSONAL PROJECTS</h2>
+<div class="h-0.5 w-12 bg-blue-600 rounded"></div>
+</div>
+<p class="text-slate-500 text-sm mt-1">Side projects that showcase my skills, problem solving ability and design approach.</p>
+</div>
+<a class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:text-blue-700 mt-3 sm:mt-0 group" href="#">
+<span>View all projects</span>
+<span class="group-hover:translate-x-1 transition-transform">➔</span>
+</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
+<div class="lg:col-span-8 bg-white rounded-3xl border border-slate-200/90 overflow-hidden shadow-card flex flex-col justify-between group hover:border-blue-300 transition-all">
+<div class="relative overflow-hidden bg-slate-100">
+<div class="absolute top-4 left-4 z-10">
+<span class="bg-blue-600 text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full tracking-wider shadow">
+                  FEATURED PROJECT
+                </span>
+</div>
+<div class="h-64 sm:h-72 w-full bg-gradient-to-tr from-slate-900 via-slate-800 to-blue-900 flex items-center justify-center p-6 text-center text-white relative">
+<div class="max-w-md">
+<span class="text-xs uppercase tracking-widest text-amber-400 font-semibold">Welcome to</span>
+<h3 class="text-2xl sm:text-3xl font-bold mt-1 text-white">Gold Field Public School</h3>
+<div class="mt-4 flex justify-center gap-2">
+<span class="text-xs bg-white/20 backdrop-blur px-3 py-1 rounded-md">Admissions Open</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between">
+<h4 class="text-xl font-bold text-slate-900 flex items-center gap-1.5 group-hover:text-blue-600 transition-colors">
+                  Gold Field Public School ↗
+                </h4>
+</div>
+<p class="text-sm text-slate-600 mt-2">
+                Modern and responsive website for a school with admissions, facilities, gallery and more.
+              </p>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="badge-pill bg-slate-100 text-slate-700">HTML</span>
+<span class="badge-pill bg-slate-100 text-slate-700">CSS</span>
+<span class="badge-pill bg-slate-100 text-slate-700">JavaScript</span>
+<span class="badge-pill bg-slate-100 text-slate-700">PHP</span>
+<span class="badge-pill bg-slate-100 text-slate-700">MySQL</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 bg-white rounded-3xl border border-slate-200/90 overflow-hidden shadow-card flex flex-col justify-between group hover:border-blue-300 transition-all">
+<div class="h-48 sm:h-52 bg-gradient-to-r from-teal-800 to-slate-800 p-6 flex flex-col justify-center items-start text-white relative">
+<span class="text-xs font-semibold text-teal-300 uppercase">Healthcare Portal</span>
+<h3 class="text-xl font-bold mt-1">Your Health <br/>Our Priority</h3>
+<div class="mt-3 text-xs bg-white/10 px-2.5 py-1 rounded">24/7 Doctor Consult</div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold text-slate-900 flex items-center gap-1.5 group-hover:text-blue-600 transition-colors">
+                Doctor Affairz ↗
+              </h4>
+<p class="text-xs sm:text-sm text-slate-600 mt-1">
+                Healthcare website for doctor appointments, services and patient information.
+              </p>
+<div class="flex flex-wrap gap-1.5 mt-4">
+<span class="badge-pill bg-slate-100 text-slate-700 text-xs">React</span>
+<span class="badge-pill bg-slate-100 text-slate-700 text-xs">Tailwind</span>
+<span class="badge-pill bg-slate-100 text-slate-700 text-xs">Node.js</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-card group hover:border-blue-300 transition-all">
+<div class="h-40 bg-gradient-to-br from-neutral-900 to-stone-800 flex items-center justify-center p-4">
+<div class="text-center">
+<h5 class="font-serif italic text-xl text-amber-100 font-bold">THE GAME</h5>
+<span class="text-[10px] uppercase tracking-widest text-slate-400">Cafe &amp; Lounge</span>
+</div>
+</div>
+<div class="p-5">
+<h4 class="text-base font-bold text-slate-900 flex items-center gap-1.5 group-hover:text-blue-600 transition-colors">
+                The Game Cafe ↗
+              </h4>
+<p class="text-xs text-slate-600 mt-1 line-clamp-2">
+                Gaming themed cafe website with menu, events and reservations.
+              </p>
+<div class="flex flex-wrap gap-1.5 mt-4">
+<span class="badge-pill bg-slate-100 text-slate-700">HTML</span>
+<span class="badge-pill bg-slate-100 text-slate-700">CSS</span>
+<span class="badge-pill bg-slate-100 text-slate-700">JavaScript</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-card group hover:border-blue-300 transition-all">
+<div class="h-40 bg-gradient-to-br from-stone-700 to-amber-950 flex items-center justify-center p-4 text-center">
+<div>
+<h5 class="text-lg font-bold text-white tracking-tight">Your Home, Made for You</h5>
+<span class="text-[10px] text-amber-200">Modern Architecture</span>
+</div>
+</div>
+<div class="p-5">
+<h4 class="text-base font-bold text-slate-900 flex items-center gap-1.5 group-hover:text-blue-600 transition-colors">
+                Tasnim Interior ↗
+              </h4>
+<p class="text-xs text-slate-600 mt-1 line-clamp-2">
+                Interior design website showcasing projects and services.
+              </p>
+<div class="flex flex-wrap gap-1.5 mt-4">
+<span class="badge-pill bg-slate-100 text-slate-700">WordPress</span>
+<span class="badge-pill bg-slate-100 text-slate-700">Divi</span>
+<span class="badge-pill bg-slate-100 text-slate-700">PHP</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-card group hover:border-blue-300 transition-all">
+<div class="h-40 bg-gradient-to-tr from-blue-900 via-indigo-950 to-slate-900 flex items-center justify-center p-4 text-center">
+<div>
+<h5 class="text-sm font-semibold text-blue-200">Empower Your Business With Reliable IT Partnership</h5>
+</div>
+</div>
+<div class="p-5">
+<h4 class="text-base font-bold text-slate-900 flex items-center gap-1.5 group-hover:text-blue-600 transition-colors">
+                IT Partner ↗
+              </h4>
+<p class="text-xs text-slate-600 mt-1 line-clamp-2">
+                IT services website for business solutions and support.
+              </p>
+<div class="flex flex-wrap gap-1.5 mt-4">
+<span class="badge-pill bg-slate-100 text-slate-700">React</span>
+<span class="badge-pill bg-slate-100 text-slate-700">Vite</span>
+<span class="badge-pill bg-slate-100 text-slate-700">Tailwind</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-14 sm:py-20 bg-white" id="clients">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 pb-4 border-b border-slate-200">
+<div>
+<div class="flex items-center gap-3">
+<span class="text-blue-600 font-extrabold tracking-wider text-sm uppercase">02.</span>
+<h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 uppercase tracking-tight">CLIENT PROJECTS</h2>
+<div class="h-0.5 w-12 bg-blue-600 rounded"></div>
+</div>
+<p class="text-slate-500 text-sm mt-1">Websites and solutions delivered for real businesses and clients.</p>
+</div>
+<a class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:text-blue-700 mt-3 sm:mt-0 group" href="#">
+<span>View all clients</span>
+<span class="group-hover:translate-x-1 transition-transform">➔</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-white rounded-3xl border border-slate-200/90 overflow-hidden shadow-card group hover:border-blue-300 transition-all flex flex-col justify-between">
+<div class="h-56 bg-stone-900 relative flex items-center justify-center p-6 text-white text-center">
+<div class="z-10">
+<span class="text-xs uppercase tracking-widest text-slate-300">Shakya Enterprises</span>
+<h3 class="text-2xl font-bold mt-1 font-serif">Elevate Your Sanctuary</h3>
+</div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold text-slate-900 flex items-center gap-1.5 group-hover:text-blue-600 transition-colors">
+                Shakya Enterprises ↗
+              </h4>
+<p class="text-xs sm:text-sm text-slate-600 mt-1">
+                Business website for interior and home solutions.
+              </p>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="badge-pill bg-slate-100 text-slate-700">WordPress</span>
+<span class="badge-pill bg-slate-100 text-slate-700">Divi</span>
+<span class="badge-pill bg-slate-100 text-slate-700">SEO</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-3xl border border-slate-200/90 overflow-hidden shadow-card group hover:border-blue-300 transition-all flex flex-col justify-between">
+<div class="h-56 bg-slate-950 relative flex items-center justify-center p-6 text-white text-center">
+<div class="z-10">
+<span class="text-xs uppercase tracking-wider text-rose-400 font-bold">Prydelix</span>
+<h3 class="text-2xl font-bold mt-1">Reliable IT Support &amp; Enterprise Security</h3>
+</div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold text-slate-900 flex items-center gap-1.5 group-hover:text-blue-600 transition-colors">
+                Prydelix ↗
+              </h4>
+<p class="text-xs sm:text-sm text-slate-600 mt-1">
+                IT services company website with service pages and contact system.
+              </p>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="badge-pill bg-slate-100 text-slate-700">WordPress</span>
+<span class="badge-pill bg-slate-100 text-slate-700">AWS</span>
+<span class="badge-pill bg-slate-100 text-slate-700">PHP</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-card group hover:border-blue-300 transition">
+<div class="h-32 bg-amber-700 flex items-center justify-center p-3 text-white">
+<span class="font-black text-lg uppercase tracking-tight">ORGULLO PASO</span>
+</div>
+<div class="p-4">
+<h4 class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition">Walton Sports ↗</h4>
+<div class="flex flex-wrap gap-1 mt-3">
+<span class="badge-pill bg-slate-100 text-[10px] text-slate-700">HTML</span>
+<span class="badge-pill bg-slate-100 text-[10px] text-slate-700">CSS</span>
+<span class="badge-pill bg-slate-100 text-[10px] text-slate-700">JS</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-card group hover:border-blue-300 transition">
+<div class="h-32 bg-blue-900 flex items-center justify-center p-3 text-white text-center">
+<span class="font-bold text-xs">Best Business Tools for Modern Teams</span>
+</div>
+<div class="p-4">
+<h4 class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition">Bizlify ↗</h4>
+<div class="flex flex-wrap gap-1 mt-3">
+<span class="badge-pill bg-slate-100 text-[10px] text-slate-700">React</span>
+<span class="badge-pill bg-slate-100 text-[10px] text-slate-700">Tailwind</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-card group hover:border-blue-300 transition">
+<div class="h-32 bg-stone-800 flex items-center justify-center p-3 text-amber-100 text-center">
+<span class="text-xs font-serif">Designing environment that elevates your living.</span>
+</div>
+<div class="p-4">
+<h4 class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition">Art of Houz ↗</h4>
+<div class="flex flex-wrap gap-1 mt-3">
+<span class="badge-pill bg-slate-100 text-[10px] text-slate-700">WordPress</span>
+<span class="badge-pill bg-slate-100 text-[10px] text-slate-700">Divi</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-card group hover:border-blue-300 transition">
+<div class="h-32 bg-sky-900 flex items-center justify-center p-3 text-white text-center">
+<span class="font-bold text-xs uppercase">Car Wash &amp; Detailing Services</span>
+</div>
+<div class="p-4">
+<h4 class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition">Wash Experts Car Wash ↗</h4>
+<div class="flex flex-wrap gap-1 mt-3">
+<span class="badge-pill bg-slate-100 text-[10px] text-slate-700">WordPress</span>
+<span class="badge-pill bg-slate-100 text-[10px] text-slate-700">PHP</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-14 sm:py-20 bg-slate-50/60 border-t border-slate-100" id="toolbox">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 pb-4 border-b border-slate-200">
+<div>
+<div class="flex items-center gap-3">
+<span class="text-blue-600 font-extrabold tracking-wider text-sm uppercase">03.</span>
+<h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 uppercase tracking-tight">TECHNICAL TOOLBOX</h2>
+<div class="h-0.5 w-12 bg-blue-600 rounded"></div>
+</div>
+<p class="text-slate-500 text-sm mt-1">Technologies and tools I work with to build modern, scalable and secure applications.</p>
+</div>
+<div class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600">
+<span>Always learning</span>
+<span>➔</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-card">
+<h3 class="text-base font-bold text-slate-900 mb-5">Languages</h3>
+<div class="grid grid-cols-4 gap-3 text-center">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 font-bold flex items-center justify-center text-lg mb-1.5">C</div>
+<span class="text-xs font-medium text-slate-600">C</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-amber-400 text-slate-900 font-bold flex items-center justify-center text-sm mb-1.5">JS</div>
+<span class="text-xs font-medium text-slate-600">JavaScript</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-700 font-bold flex items-center justify-center text-xs mb-1.5">PHP</div>
+<span class="text-xs font-medium text-slate-600">PHP</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-yellow-50 text-yellow-600 font-bold flex items-center justify-center text-lg mb-1.5">🐍</div>
+<span class="text-xs font-medium text-slate-600">Python</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-card">
+<h3 class="text-base font-bold text-slate-900 mb-5">Frontend</h3>
+<div class="grid grid-cols-4 gap-3 text-center">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-500 font-bold flex items-center justify-center text-xl mb-1.5">⚛️</div>
+<span class="text-xs font-medium text-slate-600">React</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 font-bold flex items-center justify-center text-sm mb-1.5">⚡</div>
+<span class="text-xs font-medium text-slate-600">Vite</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-cyan-50 text-cyan-600 font-bold flex items-center justify-center text-sm mb-1.5">🌊</div>
+<span class="text-xs font-medium text-slate-600">Tailwind</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-purple-600 text-white font-bold flex items-center justify-center text-sm mb-1.5">B</div>
+<span class="text-xs font-medium text-slate-600">Bootstrap</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-card">
+<h3 class="text-base font-bold text-slate-900 mb-5">Backend</h3>
+<div class="grid grid-cols-4 gap-3 text-center">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 font-bold flex items-center justify-center text-xs mb-1.5">Node</div>
+<span class="text-xs font-medium text-slate-600">Node.js</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-700 font-bold flex items-center justify-center text-xs mb-1.5">🐬</div>
+<span class="text-xs font-medium text-slate-600">MySQL</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 font-bold flex items-center justify-center text-xs mb-1.5">&lt;/&gt;</div>
+<span class="text-xs font-medium text-slate-600">REST API</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-700 font-bold flex items-center justify-center text-xs mb-1.5">PHP</div>
+<span class="text-xs font-medium text-slate-600">PHP</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-card">
+<h3 class="text-base font-bold text-slate-900 mb-5">Cloud &amp; DevOps</h3>
+<div class="grid grid-cols-4 gap-3 text-center">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 font-bold flex items-center justify-center text-xs mb-1.5">AWS</div>
+<span class="text-xs font-medium text-slate-600">AWS</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 font-bold flex items-center justify-center text-base mb-1.5">🐳</div>
+<span class="text-xs font-medium text-slate-600">Docker</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 font-bold flex items-center justify-center text-base mb-1.5">🔶</div>
+<span class="text-xs font-medium text-slate-600">Git</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 font-bold flex items-center justify-center text-xs mb-1.5">⚙️</div>
+<span class="text-xs font-medium text-slate-600">GitHub Actions</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-card">
+<h3 class="text-base font-bold text-slate-900 mb-5">Tools &amp; Monitoring</h3>
+<div class="grid grid-cols-4 gap-3 text-center">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-slate-100 text-slate-800 font-bold flex items-center justify-center text-base mb-1.5">🐧</div>
+<span class="text-xs font-medium text-slate-600">Linux</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 font-bold flex items-center justify-center text-base mb-1.5">🔥</div>
+<span class="text-xs font-medium text-slate-600">Prometheus</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-500 font-bold flex items-center justify-center text-base mb-1.5">📊</div>
+<span class="text-xs font-medium text-slate-600">Grafana</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 font-bold flex items-center justify-center text-base mb-1.5">🚀</div>
+<span class="text-xs font-medium text-slate-600">Postman</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-card">
+<h3 class="text-base font-bold text-slate-900 mb-5">Design &amp; Others</h3>
+<div class="grid grid-cols-4 gap-3 text-center">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-500 font-bold flex items-center justify-center text-base mb-1.5">🎨</div>
+<span class="text-xs font-medium text-slate-600">Figma</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 font-bold flex items-center justify-center text-base mb-1.5">C</div>
+<span class="text-xs font-medium text-slate-600">Canva</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 font-bold flex items-center justify-center text-base mb-1.5">💻</div>
+<span class="text-xs font-medium text-slate-600">VS Code</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-800 font-bold flex items-center justify-center text-base mb-1.5">W</div>
+<span class="text-xs font-medium text-slate-600">WordPress</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-14 sm:py-20 bg-white" id="education">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3 mb-10 pb-4 border-b border-slate-200">
+<span class="text-blue-600 font-extrabold tracking-wider text-sm uppercase">04.</span>
+<h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 uppercase tracking-tight">EDUCATION &amp; TRACK</h2>
+<div class="h-0.5 w-12 bg-blue-600 rounded"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-7 space-y-8 relative pl-6 border-l-2 border-blue-500 ml-3">
+<div class="relative group">
+<span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-blue-600 ring-4 ring-blue-100"></span>
+<div>
+<h3 class="text-lg font-bold text-slate-900">BCA Cloud &amp; Cybersecurity</h3>
+<p class="text-sm font-semibold text-slate-700 mt-0.5">Amity University Online (Noida)</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">2024 – 2027 (Ongoing)</span>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 mt-2">
+                  Learning cloud computing, cybersecurity, software development and modern technologies.
+                </p>
+</div>
+</div>
+<div class="relative group">
+<span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-blue-600 ring-4 ring-blue-100"></span>
+<div>
+<h3 class="text-base font-bold text-slate-900">Higher Secondary (12th)</h3>
+<p class="text-sm text-slate-600">PCM</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs text-slate-500 font-medium">2019 – 2021</span>
+<span class="text-xs font-semibold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">59%</span>
+</div>
+</div>
+</div>
+<div class="relative group">
+<span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-blue-600 ring-4 ring-blue-100"></span>
+<div>
+<h3 class="text-base font-bold text-slate-900">High School (10th)</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs text-slate-500 font-medium">2017 – 2019</span>
+<span class="text-xs font-semibold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">70%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-7 shadow-card">
+<div class="flex items-center justify-between pb-5 border-b border-slate-100">
+<h3 class="text-lg font-bold text-slate-900">Key Skills &amp; Focus</h3>
+<div class="w-10 h-10 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl">
+                🎓
+              </div>
+</div>
+<ul class="space-y-3.5 pt-5 text-sm font-medium text-slate-700">
+<li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">✓</span><span>Cloud Computing &amp; DevOps</span></li>
+<li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">✓</span><span>Web Development</span></li>
+<li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">✓</span><span>Cybersecurity</span></li>
+<li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">✓</span><span>Problem Solving</span></li>
+<li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">✓</span><span>Client Project Delivery</span></li>
+<li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">✓</span><span>Continuous Learning</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="py-14 sm:py-20 bg-slate-50/50 border-t border-slate-100" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3 mb-10 pb-4 border-b border-slate-200">
+<span class="text-blue-600 font-extrabold tracking-wider text-sm uppercase">05.</span>
+<h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 uppercase tracking-tight">GET IN TOUCH</h2>
+<div class="h-0.5 w-12 bg-blue-600 rounded"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 space-y-5">
+<span class="text-xs font-bold uppercase tracking-wider text-slate-400">LET'S BUILD SOMETHING GREAT</span>
+<h3 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+              Have a <span class="text-blue-600">project</span> in mind?
+            </h3>
+<p class="text-slate-600 text-base max-w-lg">
+              I'm open for freelance projects, collaborations and exciting opportunities. Let's create something amazing together.
+            </p>
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-950 text-white text-sm font-semibold hover:bg-slate-800 transition active:scale-95 shadow-sm" href="mailto:lalitshakya642@gmail.com">
+<span>Send an Email</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+</a>
+<a class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white border border-slate-200 text-slate-700 text-sm font-semibold hover:bg-slate-50 transition active:scale-95 shadow-sm" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4 text-blue-600 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.738-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+<span>Connect on Linkedin</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-card relative z-10">
+<div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+<div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl">
+                  ✉️
+                </div>
+<div class="flex-1 overflow-hidden">
+<span class="block text-xs font-semibold text-slate-400 uppercase">Email</span>
+<a class="text-sm font-bold text-slate-800 hover:text-blue-600 transition truncate block" href="mailto:lalitshakya642@gmail.com">
+                    lalitshakya642@gmail.com
+                  </a>
+</div>
+<button class="text-slate-400 hover:text-slate-600 p-1" onclick="navigator.clipboard.writeText('lalitshakya642@gmail.com')" title="Copy Email">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="mt-6">
+<span class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Follow Me</span>
+<div class="flex items-center gap-3">
+<a class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.738-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:text-white transition" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-rose-50 hover:text-rose-600 transition" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-red-50 hover:text-red-600 transition" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:text-white transition" href="#">
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="hidden sm:block absolute -bottom-10 -right-6 transform rotate-6 z-20">
+<span class="font-handwritten text-xl font-bold text-slate-500">
+                Open for Freelance Projects ↩
+              </span>
+</div>
+</div>
+</div>
+</div>
+</section>
 </main>
-
-<!-- ══════════════════════════════════════════ CLIENT PROJECTS ══════════════════════════════════════════ -->
-<section id="freelance" class="max-w-5xl mx-auto py-16 px-4 md:px-6 border-t border-[#30363d]">
-  <div class="section-label">// real-world freelance work delivered across live client websites</div>
-  <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
-    <h2 class="mono text-xl font-bold border-b border-[#30363d] pb-4 text-white uppercase tracking-widest italic flex-1">
-      02. client_deployments
-    </h2>
-  </div>
-  <div class="mb-10">
-    <a href="https://www.freelancer.in/u/lalit66" target="_blank" rel="noopener" class="fl-badge">
-      <i class="fas fa-link text-[9px]"></i>
-      View Freelancer Profile → freelancer.in/u/lalit66
-    </a>
-  </div>
-
-  <div class="grid md:grid-cols-2 gap-6">
-
-    <!-- CLIENT: Shakya Enterprises -->
-    <div class="client-card group reveal">
-      <img class="card-project-image" src="shakya-enterprises.jpg" alt="Shakya Enterprises website preview" loading="lazy">
-      <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
-        <span class="mono text-[8px] text-[#58a6ff]">[ CLIENT PROJECT ]</span>
-        <span class="mono text-[8px] text-slate-500">Live Website</span>
-      </div>
-
-      <div class="flex justify-between items-start mb-5">
-        <a href="https://shakyaenterprises.company/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
-          <i class="fas fa-arrow-up-right-from-square text-[9px]"></i>
-          View Website
-        </a>
-        <i class="fas fa-store text-xl text-slate-600 group-hover:text-emerald-400 transition-colors"></i>
-      </div>
-
-      <div class="flex items-center gap-3 mb-2">
-        <h4 class="text-2xl font-bold text-white">Shakya Enterprises</h4>
-        <span class="mono text-[9px] text-[#238636] border border-[#238636]/30 px-2 py-0.5 rounded-full">✓ DELIVERED</span>
-      </div>
-      <p class="mono text-[10px] text-slate-500 mb-1">WordPress · Custom Theme &amp; Plugins · WooCommerce Store</p>
-
-      <p class="text-sm text-slate-400 mb-5 italic leading-relaxed">
-        Built a fully custom-coded WordPress theme and tailored plugins for Shakya Enterprises, an artisan home-textiles brand. The WooCommerce store showcases handcrafted Jaipur collections, from bedding and cushion covers to table linen and home decor.
-      </p>
-
-      <div class="space-y-1.5 mb-5">
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Fully custom-coded WordPress theme</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Customized plugins for the store</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>WooCommerce-powered product catalog and store</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Handcrafted home essentials from Jaipur artisans</div>
-      </div>
-
-      <div class="flex flex-wrap gap-2">
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">WordPress</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">WooCommerce</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Custom Theme</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Custom Plugins</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">E-Commerce</span>
-      </div>
-    </div>
-
-    <!-- CLIENT 0: Prydelix -->
-    <div class="client-card group reveal">
-      <img class="card-project-image" src="prydelix.jpg" alt="Prydelix website preview" loading="lazy">
-      <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
-        <span class="mono text-[8px] text-[#58a6ff]">[ CLIENT PROJECT ]</span>
-        <span class="mono text-[8px] text-slate-500">Live Website</span>
-      </div>
-
-      <div class="flex justify-between items-start mb-5">
-        <a href="https://prydelix.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
-          <i class="fas fa-arrow-up-right-from-square text-[9px]"></i>
-          View Website
-        </a>
-        <i class="fas fa-rocket text-xl text-slate-600 group-hover:text-cyan-400 transition-colors"></i>
-      </div>
-
-      <div class="flex items-center gap-3 mb-2">
-        <h4 class="text-2xl font-bold text-white">Prydelix</h4>
-        <span class="mono text-[9px] text-[#238636] border border-[#238636]/30 px-2 py-0.5 rounded-full">✓ DELIVERED</span>
-      </div>
-      <p class="mono text-[10px] text-slate-500 mb-1">WordPress Theme · Custom Development</p>
-
-      <p class="text-sm text-slate-400 mb-5 italic leading-relaxed">
-        Built a custom-coded WordPress theme for Prydelix with a premium brand look, conversion-focused layout, and structured sections for business services, product presentation, and landing-page engagement. The site was designed as a clean, client-ready WordPress experience rather than a standard template build.
-      </p>
-
-      <div class="space-y-1.5 mb-5">
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Custom WordPress theme development</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Brand-focused homepage and service structure</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Responsive layout for desktop and mobile</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Client-ready website with a tailored UI</div>
-      </div>
-
-      <div class="flex flex-wrap gap-2">
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">WordPress</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">PHP</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Custom Theme</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Responsive UI</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">CMS</span>
-      </div>
-    </div>
-
-    <!-- CLIENT 1: Walon Sports -->
-    <div class="client-card group reveal">
-      <img class="card-project-image" src="walon.jpg" alt="Walon Sports website preview" loading="lazy">
-      <!-- Badges -->
-      <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
-        <span class="mono text-[8px] text-[#58a6ff]">[ CLIENT PROJECT ]</span>
-        <span class="mono text-[8px] text-slate-500">via Freelancer.com</span>
-      </div>
-
-      <div class="flex justify-between items-start mb-5">
-        <a href="https://walon.com.pe/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
-          <i class="fas fa-arrow-up-right-from-square text-[9px]"></i>
-          View Website
-        </a>
-        <i class="fas fa-credit-card text-xl text-slate-600 group-hover:text-blue-400 transition-colors"></i>
-      </div>
-
-      <!-- Status + Title -->
-      <div class="flex items-center gap-3 mb-2">
-        <h4 class="text-2xl font-bold text-white">Walon Sports</h4>
-        <span class="mono text-[9px] text-[#238636] border border-[#238636]/30 px-2 py-0.5 rounded-full">✓ DELIVERED</span>
-      </div>
-      <p class="mono text-[10px] text-slate-500 mb-1">E-Commerce · Payment Gateway Integration</p>
-
-      <p class="text-sm text-slate-400 mb-5 italic leading-relaxed">
-        Integrated multiple Peruvian payment methods — PayU LATAM, Yape, and PagoEfectivo — into Walon Sports, a WooCommerce-powered Latin American e-commerce store. Built a unified inline checkout experience covering card payments, QR-based Yape transfers, and cash-voucher PagoEfectivo flows with zero redirect friction. Handled backend API validation, token-based processing, and real-time WooCommerce order status sync on every transaction response.
-      </p>
-
-      <!-- Features -->
-      <div class="space-y-1.5 mb-5">
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>PayU LATAM inline card checkout (no redirect)</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Yape QR-based mobile payment integration</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>PagoEfectivo cash-voucher flow implementation</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>WooCommerce order status sync on transaction response</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Error handling + fallback logic for all 3 gateways</div>
-      </div>
-
-      <div class="flex flex-wrap gap-2">
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">JavaScript</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">PHP</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">WooCommerce</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">PayU LATAM API</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Yape</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">PagoEfectivo</span>
-      </div>
-    </div>
-
-    <!-- CLIENT 2: Biziffy -->
-    <div class="client-card group reveal">
-      <img class="card-project-image" src="biziffy.jpg" alt="Biziffy website preview" loading="lazy">
-      <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
-        <span class="mono text-[8px] text-[#58a6ff]">[ CLIENT PROJECT ]</span>
-        <span class="mono text-[8px] text-slate-500">via Freelancer.com</span>
-      </div>
-
-      <div class="flex justify-between items-start mb-5">
-        <a href="https://biziffy.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
-          <i class="fas fa-arrow-up-right-from-square text-[9px]"></i>
-          View Website
-        </a>
-        <i class="fab fa-google text-xl text-slate-600 group-hover:text-red-400 transition-colors"></i>
-      </div>
-
-      <div class="flex items-center gap-3 mb-2">
-        <h4 class="text-2xl font-bold text-white">Biziffy</h4>
-        <span class="mono text-[9px] text-[#238636] border border-[#238636]/30 px-2 py-0.5 rounded-full">✓ DELIVERED</span>
-      </div>
-      <p class="mono text-[10px] text-slate-500 mb-1">Web Platform · Google Maps API Integration</p>
-
-      <p class="text-sm text-slate-400 mb-5 italic leading-relaxed">
-        Integrated Google Maps API into Biziffy, a service-based location discovery platform, enabling interactive maps with real-time search and geolocation features. Implemented dynamic map rendering, multi-location marker placement, and Google Places Autocomplete for seamless address input. Optimized for performance — fast loading, smooth user interaction, and full mobile responsiveness.
-      </p>
-
-      <div class="space-y-1.5 mb-5">
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Dynamic map with custom location markers</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Real-time location search &amp; suggestions (Places API)</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Address auto-fill via Places Autocomplete</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Accurate geolocation &amp; address selection</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Mobile-responsive interactive map experience</div>
-      </div>
-
-      <div class="flex flex-wrap gap-2">
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">JavaScript</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">React.js</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Google Maps API</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Places API</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Frontend Dev</span>
-      </div>
-    </div>
-
-    <!-- CLIENT 3: Artt of Houz -->
-    <div class="client-card group reveal">
-      <img class="card-project-image" src="arttofhouz.jpg" alt="Artt of Houz website preview" loading="lazy">
-      <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
-        <span class="mono text-[8px] text-[#58a6ff]">[ CLIENT PROJECT ]</span>
-        <span class="mono text-[8px] text-slate-500">Live Website</span>
-      </div>
-
-      <div class="flex justify-between items-start mb-5">
-        <a href="https://arttofhouz.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
-          <i class="fas fa-arrow-up-right-from-square text-[9px]"></i>
-          View Website
-        </a>
-        <i class="fas fa-globe text-xl text-slate-600 group-hover:text-emerald-400 transition-colors"></i>
-      </div>
-
-      <div class="flex items-center gap-3 mb-2">
-        <h4 class="text-2xl font-bold text-white">Artt of Houz</h4>
-        <span class="mono text-[9px] text-[#238636] border border-[#238636]/30 px-2 py-0.5 rounded-full">✓ DELIVERED</span>
-      </div>
-      <p class="mono text-[10px] text-slate-500 mb-1">Hosting · Deployment · WordPress CMS</p>
-
-      <p class="text-sm text-slate-400 mb-5 italic leading-relaxed">
-        Delivered a complete website launch for Artt of Houz, including domain setup, hosting deployment, SSL configuration, Node.js troubleshooting, DNS resolution, and a React-to-WordPress theme conversion so the client can manage content through WordPress CMS.
-      </p>
-
-      <div class="space-y-1.5 mb-5">
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Live deployment on custom domain with HTTPS</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Hosting, DNS, and SSL support with debugging</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>React to WordPress theme conversion with CMS access</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Client-ready admin login and content management setup</div>
-      </div>
-
-      <div class="flex flex-wrap gap-2 mb-4">
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">React</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">PHP</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">WordPress</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Node.js</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Hosting</span>
-      </div>
-    </div>
-
-    <!-- CLIENT 4: Wash Experts Car Wash -->
-    <div class="client-card group reveal">
-      <img class="card-project-image" src="expertcarwash.jpg" alt="Wash Experts Car Wash website preview" loading="lazy">
-      <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
-        <span class="mono text-[8px] text-[#58a6ff]">[ CLIENT PROJECT ]</span>
-        <span class="mono text-[8px] text-slate-500">Website Audit & Fixes</span>
-      </div>
-
-      <div class="flex justify-between items-start mb-5">
-        <a href="https://washexpertscarwash.com.au/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-[#238636]/30 bg-[#238636]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#4ade80] hover:bg-[#238636]/20 hover:text-white transition">
-          <i class="fas fa-arrow-up-right-from-square text-[9px]"></i>
-          View Website
-        </a>
-        <i class="fas fa-broom text-xl text-slate-600 group-hover:text-emerald-400 transition-colors"></i>
-      </div>
-
-      <div class="flex items-center gap-3 mb-2">
-        <h4 class="text-2xl font-bold text-white">Wash Experts Car Wash</h4>
-        <span class="mono text-[9px] text-[#238636] border border-[#238636]/30 px-2 py-0.5 rounded-full">✓ DELIVERED</span>
-      </div>
-      <p class="mono text-[10px] text-slate-500 mb-1">Website Audit · Performance & Reliability Fixes</p>
-
-      <p class="text-sm text-slate-400 mb-5 italic leading-relaxed">
-        Performed a full website audit for Wash Experts Car Wash, identifying performance bottlenecks, improving page stability, and applying targeted fixes for a smoother user experience. Updated frontend assets, optimized loading behavior, and validated key site flows to ensure reliable client delivery.
-      </p>
-
-      <div class="space-y-1.5 mb-5">
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Full website performance audit and site fixes</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Improved page load, responsiveness, and reliability</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>SEO-friendly updates and frontend optimization</div>
-        <div class="mono text-[10px] text-slate-400"><span class="text-[#238636] mr-2">✓</span>Client-ready maintenance recommendations</div>
-      </div>
-
-      <div class="flex flex-wrap gap-2">
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Performance</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Audit</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Reliability</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Web Fixes</span>
-        <span class="text-[9px] mono client-badge px-2 py-1 rounded">Frontend</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════ SKILLS ══════════════════════════════════════════ -->
-<section id="stack" class="max-w-5xl mx-auto py-16 px-4 md:px-6 border-t border-[#30363d]">
-  <h2 class="mono text-xl font-bold border-b border-[#30363d] pb-4 text-white uppercase tracking-widest italic mb-12">
-    03. technical_toolbox
-  </h2>
-
-  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-    <!-- Col 1: Languages & Frameworks -->
-    <div class="space-y-5 reveal">
-      <h3 class="mono text-[10px] text-[#58a6ff] font-bold tracking-[0.3em] uppercase">Languages &amp; Frameworks</h3>
-      <div class="grid grid-cols-2 gap-3">
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fab fa-js text-xl text-yellow-400"></i>
-          <span class="text-[9px] mono uppercase">JavaScript</span>
+<footer class="bg-white border-t border-slate-200/80 pt-12 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-100">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-slate-900 text-white font-bold flex items-center justify-center text-xs">
+            LS
+          </div>
+<div>
+<span class="font-bold text-slate-900 text-sm">Lalit Shakya</span>
+<span class="text-xs text-slate-400 block font-medium">Build • Learn • Grow</span>
+</div>
+</div>
+<nav class="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm font-medium text-slate-600">
+<a class="hover:text-blue-600 transition" href="#home">Home</a>
+<a class="hover:text-blue-600 transition" href="#projects">Projects</a>
+<a class="hover:text-blue-600 transition" href="#clients">Clients</a>
+<a class="hover:text-blue-600 transition" href="#toolbox">Tech Stack</a>
+<a class="hover:text-blue-600 transition" href="#education">Education</a>
+<a class="hover:text-blue-600 transition" href="#contact">Contact</a>
+</nav>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-100 bg-emerald-50 text-emerald-700 text-xs font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          Available for Projects
         </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-code text-xl text-sky-400"></i>
-          <span class="text-[9px] mono uppercase">TypeScript</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fab fa-react text-xl text-cyan-400"></i>
-          <span class="text-[9px] mono uppercase">React.js</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-n text-xl text-white font-black"></i>
-          <span class="text-[9px] mono uppercase">Next.js</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-terminal text-xl text-slate-300"></i>
-          <span class="text-[9px] mono uppercase">C Programming</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-python text-xl text-blue-400"></i>
-          <span class="text-[9px] mono uppercase">Python</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fab fa-node-js text-xl text-green-400"></i>
-          <span class="text-[9px] mono uppercase">Node.js</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fab fa-php text-xl text-indigo-400"></i>
-          <span class="text-[9px] mono uppercase">PHP</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fab fa-html5 text-xl text-orange-500"></i>
-          <span class="text-[9px] mono uppercase">HTML5</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-wind text-xl text-sky-400"></i>
-          <span class="text-[9px] mono uppercase">Tailwind CSS</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-database text-xl text-blue-500"></i>
-          <span class="text-[9px] mono uppercase">MySQL</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-fire-flame-curved text-xl text-orange-400"></i>
-          <span class="text-[9px] mono uppercase">Firebase</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fab fa-wordpress text-xl text-blue-300"></i>
-          <span class="text-[9px] mono uppercase">WordPress</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-cart-shopping text-xl text-purple-400"></i>
-          <span class="text-[9px] mono uppercase">WooCommerce</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-network-wired text-xl text-violet-400"></i>
-          <span class="text-[9px] mono uppercase">REST APIs</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Col 2: Cloud & Infrastructure -->
-    <div class="space-y-5 reveal">
-      <h3 class="mono text-[10px] text-[#238636] font-bold tracking-[0.3em] uppercase">Cloud &amp; Infrastructure</h3>
-      <div class="grid grid-cols-2 gap-3">
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fab fa-aws text-xl text-orange-400"></i>
-          <span class="text-[9px] mono uppercase">AWS EC2</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-box text-xl text-yellow-400"></i>
-          <span class="text-[9px] mono uppercase">AWS S3</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-route text-xl text-sky-400"></i>
-          <span class="text-[9px] mono uppercase">Route 53</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-network-wired text-xl text-cyan-400"></i>
-          <span class="text-[9px] mono uppercase">VPC</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-globe text-xl text-blue-300"></i>
-          <span class="text-[9px] mono uppercase">DNS</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-user-shield text-xl text-blue-400"></i>
-          <span class="text-[9px] mono uppercase">IAM</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-seedling text-xl text-emerald-400"></i>
-          <span class="text-[9px] mono uppercase">Elastic Beanstalk</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-search text-xl text-indigo-400"></i>
-          <span class="text-[9px] mono uppercase">ElasticSearch</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-eye text-xl text-cyan-400"></i>
-          <span class="text-[9px] mono uppercase">CloudWatch</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-terminal text-xl text-slate-300"></i>
-          <span class="text-[9px] mono uppercase">AWS CLI</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fab fa-linux text-xl text-white"></i>
-          <span class="text-[9px] mono uppercase">Linux</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-shield-halved text-xl text-blue-400"></i>
-          <span class="text-[9px] mono uppercase">Cybersecurity</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-server text-xl text-cyan-400"></i>
-          <span class="text-[9px] mono uppercase">VPS Deployment</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-terminal text-xl text-gray-300"></i>
-          <span class="text-[9px] mono uppercase">SSH / PM2</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fab fa-vimeo-v text-xl text-cyan-300"></i>
-          <span class="text-[9px] mono uppercase">Vercel</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-cloud text-xl text-sky-300"></i>
-          <span class="text-[9px] mono uppercase">Netlify</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fab fa-github text-xl text-white"></i>
-          <span class="text-[9px] mono uppercase">GitHub Pages</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Col 3: Design & Creative -->
-    <div class="space-y-5 reveal">
-      <h3 class="mono text-[10px] text-pink-500 font-bold tracking-[0.3em] uppercase">Design &amp; Creative</h3>
-      <div class="grid grid-cols-2 gap-3">
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fab fa-figma text-xl text-orange-500"></i>
-          <span class="text-[9px] mono uppercase">Figma</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fab fa-adobe text-xl text-red-500"></i>
-          <span class="text-[9px] mono uppercase">Adobe XD</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-palette text-xl text-blue-500"></i>
-          <span class="text-[9px] mono uppercase">Photoshop</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-paint-brush text-xl text-cyan-400"></i>
-          <span class="text-[9px] mono uppercase">Canva</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-vector-square text-xl text-violet-400"></i>
-          <span class="text-[9px] mono uppercase">Framer</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-wave-square text-xl text-sky-400"></i>
-          <span class="text-[9px] mono uppercase">Webflow</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-bolt text-xl text-yellow-400"></i>
-          <span class="text-[9px] mono uppercase">Kajabi</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-video text-xl text-green-400"></i>
-          <span class="text-[9px] mono uppercase">CapCut</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Col 4: AI & Dev Tools -->
-    <div class="space-y-5 reveal">
-      <h3 class="mono text-[10px] text-blue-400 font-bold tracking-[0.3em] uppercase">AI &amp; Dev Tools</h3>
-      <div class="grid grid-cols-2 gap-3">
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-robot text-xl text-indigo-400"></i>
-          <span class="text-[9px] mono uppercase">ChatGPT/LLMs</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-code text-xl text-yellow-400"></i>
-          <span class="text-[9px] mono uppercase">GitHub Copilot</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-wand-magic-sparkles text-xl text-pink-400"></i>
-          <span class="text-[9px] mono uppercase">Midjourney</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-brain text-xl text-red-400"></i>
-          <span class="text-[9px] mono uppercase">AI Prompting</span>
-        </div>
-        <div class="skill-badge p-4 rounded-xl flex flex-col items-center gap-2">
-          <i class="fas fa-file-excel text-xl text-green-500"></i>
-          <span class="text-[9px] mono uppercase">Microsoft Excel</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Also worked with -->
-  <div class="mt-12 pt-8 border-t border-[#30363d] reveal">
-    <p class="mono text-[10px] text-slate-500 mb-4">// also worked with:</p>
-    <div class="flex flex-wrap gap-2">
-      <span class="mono text-[10px] text-slate-400 border border-[#30363d] px-3 py-1.5 rounded-full hover:border-blue-500/50 hover:text-slate-200 transition cursor-default">PayU LATAM</span>
-      <span class="mono text-[10px] text-slate-400 border border-[#30363d] px-3 py-1.5 rounded-full hover:border-blue-500/50 hover:text-slate-200 transition cursor-default">Google Maps API</span>
-      <span class="mono text-[10px] text-slate-400 border border-[#30363d] px-3 py-1.5 rounded-full hover:border-blue-500/50 hover:text-slate-200 transition cursor-default">Places API</span>
-      <span class="mono text-[10px] text-slate-400 border border-[#30363d] px-3 py-1.5 rounded-full hover:border-blue-500/50 hover:text-slate-200 transition cursor-default">Razorpay API</span>
-      <span class="mono text-[10px] text-slate-400 border border-[#30363d] px-3 py-1.5 rounded-full hover:border-blue-500/50 hover:text-slate-200 transition cursor-default">PayPal</span>
-      <span class="mono text-[10px] text-slate-400 border border-[#30363d] px-3 py-1.5 rounded-full hover:border-blue-500/50 hover:text-slate-200 transition cursor-default">Stripe</span>
-      <span class="mono text-[10px] text-slate-400 border border-[#30363d] px-3 py-1.5 rounded-full hover:border-blue-500/50 hover:text-slate-200 transition cursor-default">Cashfree</span>
-      <span class="mono text-[10px] text-slate-400 border border-[#30363d] px-3 py-1.5 rounded-full hover:border-blue-500/50 hover:text-slate-200 transition cursor-default">Yape</span>
-      <span class="mono text-[10px] text-slate-400 border border-[#30363d] px-3 py-1.5 rounded-full hover:border-blue-500/50 hover:text-slate-200 transition cursor-default">PagoEfectivo</span>
-      <span class="mono text-[10px] text-slate-400 border border-[#30363d] px-3 py-1.5 rounded-full hover:border-blue-500/50 hover:text-slate-200 transition cursor-default">PWA</span>
-      <span class="mono text-[10px] text-slate-400 border border-[#30363d] px-3 py-1.5 rounded-full hover:border-blue-500/50 hover:text-slate-200 transition cursor-default">Vercel</span>
-      <span class="mono text-[10px] text-slate-400 border border-[#30363d] px-3 py-1.5 rounded-full hover:border-blue-500/50 hover:text-slate-200 transition cursor-default">Netlify</span>
-      <span class="mono text-[10px] text-slate-400 border border-[#30363d] px-3 py-1.5 rounded-full hover:border-blue-500/50 hover:text-slate-200 transition cursor-default">GitHub Pages</span>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════ EDUCATION ══════════════════════════════════════════ -->
-<section id="edu" class="max-w-5xl mx-auto py-16 px-4 md:px-6 border-t border-[#30363d]">
-  <h2 class="mono text-xl font-bold border-b border-[#30363d] pb-4 text-white uppercase tracking-widest italic mb-12">
-    04. education_track
-  </h2>
-
-  <div class="flex flex-col md:flex-row gap-12">
-
-    <!-- Timeline -->
-    <div class="flex-1 space-y-8">
-      <h3 class="mono text-white tracking-widest uppercase text-sm font-bold">// academic_path</h3>
-      <div class="space-y-8">
-        <div class="edu-border reveal-edu">
-          <h4 class="text-white font-bold">BCA Cloud &amp; Cybersecurity</h4>
-          <p class="text-xs text-slate-500 uppercase mt-1 italic">Amity University | 2024 – Present</p>
-          <p class="text-sm text-slate-400 mt-2 leading-relaxed">Studying cloud infrastructure, networking, cybersecurity fundamentals, and software development at Amity University.</p>
-        </div>
-        <div class="edu-border reveal-edu">
-          <h4 class="text-white font-bold">High School (XII)</h4>
-          <p class="text-xs text-slate-500 uppercase mt-1 italic">Govt. Boys Sr. Sec. School | 2023 – 2024</p>
-          <p class="text-sm text-slate-400 mt-2 leading-relaxed">Completed 12th standard with focus on Science &amp; Math.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Certificates -->
-    <div class="flex-1 bg-[#0d1117] border border-[#30363d] p-8 rounded-2xl reveal">
-      <h3 class="mono text-white tracking-widest uppercase text-sm font-bold mb-6">verify_status</h3>
-      <div class="space-y-3">
-        <a href="https://amigo.amityonline.com/mod/customcert/verify_certificate.php?code=GCAyb3sUQz&qrcode=1" target="_blank" rel="noopener" class="flex justify-between items-center text-xs mono p-3 hover:bg-[#161b22] rounded transition" aria-label="Verify Advanced Excel Certificate">
-          <span>&gt; advanced_excel.log</span>
-          <span class="text-[#238636]">[VERIFIED]</span>
-        </a>
-        <a href="https://amigo.amityonline.com/mod/customcert/verify_certificate.php?code=tp3eUfChTu&qrcode=1" target="_blank" rel="noopener" class="flex justify-between items-center text-xs mono p-3 hover:bg-[#161b22] rounded transition" aria-label="Verify Basic Maths Certificate">
-          <span>&gt; basic_maths.log</span>
-          <span class="text-[#238636]">[VERIFIED]</span>
-        </a>
-        <div class="flex justify-between items-center text-xs mono p-3 rounded text-slate-600">
-          <span>&gt; Aws_Certs.log</span>
-          <span class="text-yellow-600">[Prepping]</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════ CONTACT ══════════════════════════════════════════ -->
-<section id="contact" class="max-w-5xl mx-auto py-16 px-4 md:px-6 border-t border-[#30363d]">
-  <h2 class="mono text-xl font-bold border-b border-[#30363d] pb-4 text-white uppercase tracking-widest italic mb-12">
-    05. get_in_touch
-  </h2>
-
-  <!-- Terminal Intro -->
-  <div class="max-w-2xl mx-auto mb-10 reveal">
-    <div class="terminal-window p-6 mono text-sm">
-      <div class="text-[#238636] mb-1">&gt;&gt;&gt; Lalit.status()</div>
-      <div class="text-slate-300">
-        <span class="text-[#58a6ff]">{</span><br>
-        &nbsp;&nbsp;<span class="text-[#238636]">available</span><span class="text-slate-500">:</span> <span class="text-white">true</span><span class="text-slate-500">,</span><br>
-        &nbsp;&nbsp;<span class="text-[#238636]">open_to</span><span class="text-slate-500">:</span> <span class="text-[#58a6ff]">[</span><span class="text-yellow-300">"freelance"</span><span class="text-slate-500">,</span> <span class="text-yellow-300">"collaborations"</span><span class="text-slate-500">,</span> <span class="text-yellow-300">"internships"</span><span class="text-[#58a6ff]">]</span><br>
-        <span class="text-[#58a6ff]">}</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Contact Cards -->
-  <div class="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
-
-    <a href="mailto:lalshakya27@gmail.com" class="contact-card reveal" aria-label="Send email to Lalit Shakya">
-      <div class="w-10 h-10 rounded-full bg-[#238636]/15 flex items-center justify-center">
-        <i class="fas fa-envelope text-[#238636] text-lg"></i>
-      </div>
-      <div>
-        <div class="text-white font-bold text-sm">Send a Mail</div>
-        <div class="mono text-[9px] text-slate-500 mt-1">lalshakya27@gmail.com</div>
-      </div>
-    </a>
-
-    <a href="https://www.linkedin.com/in/buildwithlalit/" target="_blank" rel="noopener" class="contact-card reveal" aria-label="Connect with Lalit on LinkedIn">
-      <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
-        <i class="fab fa-linkedin text-blue-400 text-lg"></i>
-      </div>
-      <div>
-        <div class="text-white font-bold text-sm">Connect on LinkedIn</div>
-        <div class="mono text-[9px] text-slate-500 mt-1">in/buildwithlalit</div>
-      </div>
-    </a>
-
-    <a href="https://www.freelancer.in/u/lalit66" target="_blank" rel="noopener" class="contact-card reveal" aria-label="Hire Lalit on Freelancer">
-      <div class="w-10 h-10 rounded-full bg-[#58a6ff]/10 flex items-center justify-center">
-        <i class="fas fa-briefcase text-[#58a6ff] text-lg"></i>
-      </div>
-      <div>
-        <div class="text-white font-bold text-sm">Hire on Freelancer</div>
-        <div class="mono text-[9px] text-slate-500 mt-1">freelancer.in/u/lalit66</div>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════ FOOTER ══════════════════════════════════════════ -->
-<footer class="max-w-5xl mx-auto py-12 px-4 md:px-6 text-center border-t border-[#30363d]">
-  <div class="flex justify-center gap-6 mb-6">
-    <a href="https://github.com/GODxDRIFT" target="_blank" rel="noopener" class="text-slate-500 hover:text-white transition" aria-label="Lalit's GitHub">
-      <i class="fab fa-github text-xl"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/buildwithlalit/" target="_blank" rel="noopener" class="text-slate-500 hover:text-white transition" aria-label="Lalit's LinkedIn">
-      <i class="fab fa-linkedin text-xl"></i>
-    </a>
-    <a href="https://www.freelancer.in/u/lalit66" target="_blank" rel="noopener" class="text-slate-500 hover:text-white transition" aria-label="Lalit's Freelancer profile">
-      <i class="fas fa-briefcase text-xl"></i>
-    </a>
-    <a href="mailto:lalshakya27@gmail.com" class="text-slate-500 hover:text-white transition" aria-label="Email Lalit">
-      <i class="fas fa-envelope text-xl"></i>
-    </a>
-  </div>
-  <p class="mono text-[10px] text-slate-600 uppercase tracking-[0.4em]">
-    System Status: Optimized | Lalit Shakya © 2026 | Built with HTML · Tailwind · ❤️
-  </p>
+</div>
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-3">
+<p>© 2026 Lalit Shakya. All rights reserved.</p>
+<p class="font-medium text-slate-500">Turning ideas into real products.</p>
+</div>
+</div>
 </footer>
-
-
-<!-- ══════════════════════════════════════════ JAVASCRIPT ══════════════════════════════════════════ -->
-<script>
-  /* ─── THEME SWITCHER ─── */
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeIcon = document.getElementById('theme-icon');
-  const savedTheme = localStorage.getItem('portfolio-theme');
-  const preferredTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-
-  function applyTheme(theme) {
-    document.documentElement.dataset.theme = theme;
-    const isLight = theme === 'light';
-    themeIcon.className = `fas fa-${isLight ? 'moon' : 'sun'} text-sm`;
-    themeToggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} theme`);
-    themeToggle.title = `Switch to ${isLight ? 'dark' : 'light'} theme`;
-  }
-
-  applyTheme(preferredTheme);
-  themeToggle.addEventListener('click', () => {
-    const nextTheme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
-    localStorage.setItem('portfolio-theme', nextTheme);
-    applyTheme(nextTheme);
-  });
-
-  /* ─── HAMBURGER ─── */
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const hb1 = document.getElementById('hb1');
-  const hb2 = document.getElementById('hb2');
-  const hb3 = document.getElementById('hb3');
-  let menuOpen = false;
-
-  hamburger.addEventListener('click', () => {
-    menuOpen = !menuOpen;
-    mobileMenu.classList.toggle('open', menuOpen);
-    hb1.style.transform = menuOpen ? 'rotate(45deg) translate(4px,4px)' : '';
-    hb2.style.opacity = menuOpen ? '0' : '1';
-    hb3.style.transform = menuOpen ? 'rotate(-45deg) translate(4px,-4px)' : '';
-  });
-
-  function closeMobile() {
-    menuOpen = false;
-    mobileMenu.classList.remove('open');
-    hb1.style.transform = '';
-    hb2.style.opacity = '1';
-    hb3.style.transform = '';
-  }
-
-  /* ─── SMOOTH SCROLL ─── */
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
-  /* ─── TYPING ANIMATION ─── */
-  const typedEl = document.getElementById('typed-text');
-  const cursorEl = document.getElementById('cursor');
-  const heroContent = document.getElementById('hero-content');
-  const typingText = '>>> Lalit.init_skills()';
-  let i = 0;
-
-  function type() {
-    if (i < typingText.length) {
-      typedEl.textContent += typingText[i];
-      i++;
-      setTimeout(type, 40);
-    } else {
-      cursorEl.style.display = 'inline-block';
-      // Fade in hero content after 400ms
-      setTimeout(() => {
-        heroContent.classList.add('visible');
-        startCounters();
-      }, 400);
-    }
-  }
-
-  // Start typing on load
-  window.addEventListener('load', () => setTimeout(type, 200));
-
-  /* ─── COUNTER ANIMATION ─── */
-  function animateCounter(el, target, suffix, duration) {
-    const start = performance.now();
-    function update(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      // easeOut cubic
-      const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.floor(eased * target) + suffix;
-      if (progress < 1) requestAnimationFrame(update);
-      else el.textContent = target + suffix;
-    }
-    requestAnimationFrame(update);
-  }
-
-  function startCounters() {
-    animateCounter(document.getElementById('stat-projects'), 12, '+', 1500);
-    animateCounter(document.getElementById('stat-clients'), 6, '+', 1500);
-    animateCounter(document.getElementById('stat-years'), 1, '+', 1200);
-  }
-
-  /* ─── SCROLL REVEAL (IntersectionObserver) ─── */
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, idx) => {
-      if (entry.isIntersecting) {
-        // Find siblings for stagger
-        const siblings = entry.target.parentElement
-          ? [...entry.target.parentElement.querySelectorAll('.reveal')]
-          : [entry.target];
-        const delay = siblings.indexOf(entry.target) * 80;
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, delay);
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-  /* ─── EDUCATION BORDER REVEAL ─── */
-  const eduObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, idx) => {
-      if (entry.isIntersecting) {
-        const siblings = [...document.querySelectorAll('.reveal-edu')];
-        const delay = siblings.indexOf(entry.target) * 200;
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, delay);
-        eduObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll('.reveal-edu').forEach(el => eduObserver.observe(el));
-
-  /* ─── NAV ACTIVE STATE ─── */
-  const sections = document.querySelectorAll('main[id], section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  const navObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => link.classList.remove('active'));
-        const active = document.querySelector(`.nav-link[data-section="${entry.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' });
-
-  sections.forEach(s => navObserver.observe(s));
-</script>
-
-</body>
-</html>
+</body></html>
