@@ -74,6 +74,13 @@
       --text: #c9d1d9;
     }
 
+    [data-theme="light"] {
+      --bg: #f4f7fb;
+      --card-bg: #ffffff;
+      --border: #d8e0ea;
+      --text: #1f2937;
+    }
+
     * { box-sizing: border-box; }
 
     html { scroll-behavior: smooth; }
@@ -82,7 +89,46 @@
       font-family: 'Inter', sans-serif;
       background-color: var(--bg);
       color: var(--text);
+      transition: background-color 0.25s ease, color 0.25s ease;
     }
+
+    [data-theme="light"] body::after { opacity: 0.08; }
+    [data-theme="light"] .nav-blur { background: rgba(244,247,251,0.9); }
+    [data-theme="light"] .terminal-window,
+    [data-theme="light"] .project-card,
+    [data-theme="light"] .client-card,
+    [data-theme="light"] .contact-card,
+    [data-theme="light"] .stat-card { box-shadow: 0 12px 30px rgba(31,41,55,0.08); }
+    [data-theme="light"] .project-card,
+    [data-theme="light"] .client-card { background: #ffffff; border-color: #d8e0ea; }
+    [data-theme="light"] .project-card:hover,
+    [data-theme="light"] .client-card:hover,
+    [data-theme="light"] .contact-card:hover { background: #f8fafc; }
+    [data-theme="light"] .text-white { color: #172033 !important; }
+    [data-theme="light"] .text-slate-300 { color: #344054 !important; }
+    [data-theme="light"] .text-slate-400 { color: #526176 !important; }
+    [data-theme="light"] .text-slate-500 { color: #66758a !important; }
+    [data-theme="light"] .text-slate-600 { color: #738198 !important; }
+    [data-theme="light"] .bg-\[\#161b22\] { background: #e9eef5 !important; }
+    [data-theme="light"] .bg-\[\#0d1117\] { background: #ffffff !important; }
+    [data-theme="light"] .border-\[\#30363d\] { border-color: #d8e0ea !important; }
+    [data-theme="light"] .mobile-theme-surface { background: rgba(255,255,255,0.96); }
+    [data-theme="light"] .theme-toggle { color: #344054; border-color: #c8d2df; background: #ffffff; }
+    [data-theme="light"] .theme-toggle:hover { color: #172033; background: #e9eef5; }
+
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      color: #c9d1d9;
+      background: rgba(13,17,23,0.75);
+      transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+    .theme-toggle:hover { color: #fff; background: #161b22; border-color: #58a6ff; }
 
     ::selection { background: rgba(88,166,255,0.25); }
 
@@ -216,6 +262,7 @@
       color: white;
       background: linear-gradient(90deg,#58a6ff,#bc8cff);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
       border: 1px solid rgba(88,166,255,0.12);
       padding: 0.25rem 0.6rem;
@@ -405,6 +452,9 @@
 
     <!-- CTA + Hamburger -->
     <div class="flex items-center gap-3">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme">
+        <i id="theme-icon" class="fas fa-sun text-sm" aria-hidden="true"></i>
+      </button>
       <a href="mailto:lalshakya27@gmail.com" class="hidden md:inline-flex border border-[#30363d] px-4 py-2 rounded-md text-[10px] mono hover:bg-[#30363d] hover:text-white transition text-slate-300">
         git push origin hire
       </a>
@@ -417,7 +467,7 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden border-t border-[#30363d] bg-[#010409]/95">
+  <div id="mobile-menu" class="md:hidden border-t border-[#30363d] bg-[#010409]/95 mobile-theme-surface">
     <div class="flex flex-col px-6 py-4 gap-4 mono text-[11px] uppercase tracking-widest text-slate-400">
       <a href="#work"      class="hover:text-blue-400 transition" onclick="closeMobile()">./projects</a>
       <a href="#freelance" class="hover:text-blue-400 transition" onclick="closeMobile()">./client-work</a>
@@ -1276,6 +1326,27 @@
 
 <!-- ══════════════════════════════════════════ JAVASCRIPT ══════════════════════════════════════════ -->
 <script>
+  /* ─── THEME SWITCHER ─── */
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  const savedTheme = localStorage.getItem('portfolio-theme');
+  const preferredTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+
+  function applyTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    const isLight = theme === 'light';
+    themeIcon.className = `fas fa-${isLight ? 'moon' : 'sun'} text-sm`;
+    themeToggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} theme`);
+    themeToggle.title = `Switch to ${isLight ? 'dark' : 'light'} theme`;
+  }
+
+  applyTheme(preferredTheme);
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('portfolio-theme', nextTheme);
+    applyTheme(nextTheme);
+  });
+
   /* ─── HAMBURGER ─── */
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
