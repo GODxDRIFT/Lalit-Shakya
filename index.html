@@ -14,16 +14,7 @@
 <script>tailwind.config={theme:{extend:{fontFamily:{sans:['"Plus Jakarta Sans"','sans-serif'],handwritten:['"Caveat"','cursive']},boxShadow:{subtle:'0 4px 20px -2px rgba(0,0,0,0.05)',card:'0 10px 30px -4px rgba(0,0,0,0.04), 0 2px 6px -1px rgba(0,0,0,0.02)'}}}}</script>
 <style>.badge-pill{display:inline-flex;align-items:center;padding:.25rem .75rem;border-radius:9999px;font-size:.75rem;font-weight:500}
 .laptop-frame{perspective:1200px}.laptop-screen{transform:rotateY(-14deg) rotateX(8deg);box-shadow:-20px 25px 40px -10px rgba(0,0,0,.25)}
-section{scroll-margin-top:5rem}.line-clamp-2,.line-clamp-3{display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}.line-clamp-2{-webkit-line-clamp:2}.line-clamp-3{-webkit-line-clamp:3}
-.brand-lockup{display:flex;align-items:flex-end;gap:1rem;max-width:100%;margin:0 auto 1rem auto}
-.brand-mark{position:relative;width:clamp(120px,18vw,260px);height:clamp(150px,19vw,330px);border-radius:1.6rem 1.6rem 0 0;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#17d0ff 0%,#0ea5e9 40%,#1d4ed8 100%);box-shadow:0 0 40px rgba(14,165,233,.18);overflow:hidden}
-.brand-mark::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.18),transparent 45%);}
-.brand-mark::after{content:"L";position:relative;font-size:clamp(8rem,13vw,18rem);line-height:0.78;font-weight:900;letter-spacing:-.08em;color:rgba(13,31,66,.9);text-shadow:0 0 22px rgba(53,187,255,.2);transform:translateX(-4%)}
-.brand-name{font-size:clamp(3.2rem,7vw,10rem);font-weight:900;letter-spacing:-.08em;line-height:.88;color:#08182a;text-shadow:0 0 18px rgba(14,165,233,.08);white-space:nowrap}
-.brand-name span{display:block;background:linear-gradient(90deg,#0d1933 0%,#183a6b 30%,#1a5fb0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.brand-subtitle{display:flex;align-items:center;gap:1rem;font-size:clamp(1.6rem,2.8vw,4rem);font-weight:800;letter-spacing:-.06em;color:#091a2d;line-height:1.1}
-.brand-subtitle .divider{width:3px;height:clamp(2.2rem,3vw,3.8rem);background:linear-gradient(180deg,#0ea5e9,#1d4ed8);border-radius:99px;opacity:.8}
-@media (max-width: 768px){.brand-lockup{flex-direction:column;align-items:flex-start}.brand-name{white-space:normal}.brand-subtitle{font-size:clamp(1.3rem,5vw,2.7rem)}.brand-subtitle .divider{display:none}}</style>
+section{scroll-margin-top:5rem}.line-clamp-2,.line-clamp-3{display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}.line-clamp-2{-webkit-line-clamp:2}.line-clamp-3{-webkit-line-clamp:3}</style>
 </head>
 <body class="bg-[#fafbfc] text-slate-800 font-sans antialiased selection:bg-blue-100 selection:text-blue-700">
 <header class="sticky top-0 z-50 bg-[#fafbfc]/90 backdrop-blur-md border-b border-slate-100"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -36,13 +27,8 @@ section{scroll-margin-top:5rem}.line-clamp-2,.line-clamp-3{display:-webkit-box;-
 <main>
 <section class="pt-8 pb-16 md:pt-14 md:pb-24 overflow-hidden relative" id="home"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 <div class="lg:col-span-7 flex flex-col items-start space-y-6">
-<div class="brand-lockup w-full">
-  <div class="brand-mark" aria-label="Lalit Shakya logo mark"></div>
-  <div>
-    <div class="brand-name"><span>Lalit Shakya</span></div>
-    <div class="brand-subtitle"><span>Full Stack Developer</span><span class="divider"></span><span>Cloud &amp; Cybersecurity</span></div>
-  </div>
-</div>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100/80 border border-slate-200/80 rounded-full text-xs font-bold uppercase tracking-wider text-slate-700">HI, I'M LALIT SHAKYA 👋</div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">Full Stack Dev &amp; <br><span class="text-blue-600">Cloud</span> Freelancer.</h1>
 <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl">I build high-performance websites, integrate payment gateways, and deploy scalable cloud solutions. Available for freelance projects, collaborations, and internships.</p>
 <div class="grid grid-cols-3 gap-3 sm:gap-4 w-full max-w-md pt-1"><div class="bg-white border border-slate-200/80 p-3 sm:p-4 rounded-2xl shadow-card text-left"><span class="block text-2xl sm:text-3xl font-extrabold text-slate-900">12+</span><span class="text-xs text-slate-500 font-medium">Projects</span></div><div class="bg-white border border-slate-200/80 p-3 sm:p-4 rounded-2xl shadow-card text-left"><span class="block text-2xl sm:text-3xl font-extrabold text-slate-900">6+</span><span class="text-xs text-slate-500 font-medium">Client Work</span></div><div class="bg-white border border-slate-200/80 p-3 sm:p-4 rounded-2xl shadow-card text-left"><span class="block text-2xl sm:text-3xl font-extrabold text-slate-900">1+</span><span class="text-xs text-slate-500 font-medium">Years Experience</span></div></div>
 <div class="flex flex-wrap items-center gap-3 pt-2"><a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 shadow-md shadow-blue-500/20 transition active:scale-95" href="#projects"><span>View My Work</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/></svg></a>
