@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://godxdrift.github.io/Lalit-Shakya/sitemap.xml
