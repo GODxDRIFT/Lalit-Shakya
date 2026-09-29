@@ -257,13 +257,15 @@
       height: 180px;
       margin: -2rem -2rem 1.5rem;
       object-fit: cover;
-      object-position: center;
+      object-position: left center;
       border-bottom: 1px solid rgba(88,166,255,0.18);
+      transform: scale(1.08);
+      transform-origin: left center;
       transition: transform 0.35s ease, filter 0.35s ease;
     }
     .project-card:hover .card-project-image,
     .client-card:hover .card-project-image {
-      transform: scale(1.025);
+      transform: scale(1.12);
       filter: saturate(1.08);
     }
 
